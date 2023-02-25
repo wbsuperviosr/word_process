@@ -1,0 +1,19 @@
+{
+	"parser": "@typescript-eslint/parser",
+	"plugins": ["@typescript-eslint"],
+	"rules": {
+		"semi": ["error", "never"],
+		"quotes": [2, "double"]
+	},
+	"eslint.validate": [
+		{
+			"language": "typescript",
+			"autoFix": true
+		},
+		{
+			"language": "typescriptreact",
+			"autoFix": true
+		}
+	],
+	"eslint.autoFixOnSave": true
+}

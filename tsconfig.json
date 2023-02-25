@@ -1,0 +1,9 @@
+{
+	"compilerOptions": {
+		"lib": ["ES2021"],
+		"strict": true,
+		"target": "ES2021",
+		"moduleResolution": "node",
+		"forceConsistentCasingInFileNames": true
+	}
+}

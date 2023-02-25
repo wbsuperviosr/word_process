@@ -1,0 +1,1058 @@
+[
+	{
+		"_createdAt": "2022-12-24T16:03:22Z",
+		"_id": "b30f01e2-9774-425f-a2cd-762341c93157",
+		"_rev": "dTE8GpT4pG0ovwHzuWTgWc",
+		"_type": "rumor",
+		"_updatedAt": "2023-02-05T10:23:16Z",
+		"importance": 5,
+		"question": "案发当晚，凶杀发生前，邻居们听到了争吵的声音？",
+		"rumor": "根据江秋莲代理律师黄乐平在代理词中的描述可知：案发时提前埋伏的陈世峰在8.36米的走廊上没跑过刘鑫，破口大骂。",
+		"rumor_images": [
+			{
+				"_key": "a5ea9ffae965",
+				"_type": "image_urlObject",
+				"height": "1039",
+				"urlField": "5谣言澄清\\文字图片\\20161102_案发现场发生了争执？\\20161102_案发现场发生了争执？_01_黄乐平代理词_陈世峰没跑过刘鑫，破口大骂.jpg",
+				"url_title": "20161102_案发现场发生了争执？_01_黄乐平代理词_陈世峰没跑过刘鑫，破口大骂.jpg",
+				"width": "1080"
+			}
+		],
+		"rumor_posts": [
+			{
+				"_key": "158d40e24853",
+				"_type": "posts_urlObject",
+				"urlField": "/voices/huangleping_statement",
+				"url_title": "江歌母亲诉刘鑫案律师代理词"
+			}
+		],
+		"rumor_spreader": ["徐静波、江秋莲、黄乐平"],
+		"rumor_victim": ["刘鑫、陈世峰"],
+		"tags": ["凶案现场"],
+		"truth": "根据进入日本庭审现场的凤凰网报道，203两位缅甸邻居只听到1次被打断的叫声，没有听到男人声音，之后第1次开门查看时，还以为陈世峰在照顾醉倒的江歌。\n\n另一位隔壁楼邻居小岛最开始听到了走廊的叫声，之后听到了门的响动，及房间内女性“要叫警察了”的大叫。小岛也没有听到男人声音，并对110接警员表示“不知道发生了什么”。\n\n刘鑫只听到了1次被打断的叫声，推门被反推回来（外开门带闭门器）。\n\n媒体报道案发前现场发生了争执，实际上是案发前8小时。\n\n黄乐平谎称江歌16：15才到达公寓，故意掩盖江歌与陈世峰下午的激烈冲突。\n\n陈世峰凌晨作案前全身换装，穿帽衫戴帽子加口罩，又另带了一套替换衣服、绕道上车、现金买票，案发后2个小时，警方按刘鑫提供的地址包围了陈世峰公寓，警察盘问时，陈世峰撒谎：“我一直在家”。\n\n江秋莲2017年在日本法庭上的意见陈述：陈世峰非常冷静。（与国内民事诉讼的案情主张完全不同）\n\n结合201缅甸邻居笔录、小岛报警描述、陈世峰案发前后始终意图脱罪的表现，他在行凶时会出声暴露自己？",
+		"truth_images": [
+			{
+				"_key": "d5e32310aea9",
+				"_type": "image_urlObject",
+				"height": "14092",
+				"urlField": "5谣言澄清\\文字图片\\20161102_案发现场发生了争执？\\20161102_案发现场发生了争执？.jpg",
+				"url_title": "20161102_案发现场发生了争执？.jpg",
+				"width": "1080"
+			},
+			{
+				"_key": "be987e88e59b",
+				"_type": "image_urlObject",
+				"height": "1287",
+				"urlField": "5谣言澄清\\文字图片\\20161102_案发现场发生了争执？\\20161102_案发现场发生了争执？_02_凤凰网_203笔录只听到1次叫声，没有听到男人声音.jpg",
+				"url_title": "20161102_案发现场发生了争执？_02_凤凰网_203笔录只听到1次叫声，没有听到男人声音.jpg",
+				"width": "1080"
+			},
+			{
+				"_key": "60c3e71af286",
+				"_type": "image_urlObject",
+				"height": "2457",
+				"urlField": "5谣言澄清\\文字图片\\20161102_案发现场发生了争执？\\20161102_案发现场发生了争执？_03_小岛报警记录_小岛没有听到男人声音.jpg",
+				"url_title": "20161102_案发现场发生了争执？_03_小岛报警记录_小岛没有听到男人声音.jpg",
+				"width": "984"
+			},
+			{
+				"_key": "b1a959810e17",
+				"_type": "image_urlObject",
+				"height": "1167",
+				"urlField": "5谣言澄清\\文字图片\\20161102_案发现场发生了争执？\\20161102_案发现场发生了争执？_04_凤凰网_刘鑫只听到了1次被打断的叫声.jpg",
+				"url_title": "20161102_案发现场发生了争执？_04_凤凰网_刘鑫只听到了1次被打断的叫声.jpg",
+				"width": "1080"
+			},
+			{
+				"_key": "6ff60e8e16fe",
+				"_type": "image_urlObject",
+				"height": "3359",
+				"urlField": "5谣言澄清\\文字图片\\20161102_案发现场发生了争执？\\20161102_案发现场发生了争执？_05_媒体报道案发前现场发生了争执，实际上是案发前8小时.jpg",
+				"url_title": "20161102_案发现场发生了争执？_05_媒体报道案发前现场发生了争执，实际上是案发前8小时.jpg",
+				"width": "1080"
+			},
+			{
+				"_key": "8ce1726276c0",
+				"_type": "image_urlObject",
+				"height": "720",
+				"urlField": "5谣言澄清\\文字图片\\20161102_案发现场发生了争执？\\20161102_案发现场发生了争执？_06_13分视频_黄乐平谎称江歌16：15才到达公寓.jpg",
+				"url_title": "20161102_案发现场发生了争执？_06_13分视频_黄乐平谎称江歌16：15才到达公寓.jpg",
+				"width": "1280"
+			},
+			{
+				"_key": "61517ce5c52a",
+				"_type": "image_urlObject",
+				"height": "181",
+				"urlField": "5谣言澄清\\文字图片\\20161102_案发现场发生了争执？\\20161102_案发现场发生了争执？_07_江秋莲微博_陈世峰被逮捕时不承认杀人.jpg",
+				"url_title": "20161102_案发现场发生了争执？_07_江秋莲微博_陈世峰被逮捕时不承认杀人.jpg",
+				"width": "648"
+			},
+			{
+				"_key": "d13e58b603fc",
+				"_type": "image_urlObject",
+				"height": "1464",
+				"urlField": "5谣言澄清\\文字图片\\20161102_案发现场发生了争执？\\20161102_案发现场发生了争执？_08_凤凰网_江秋莲2017年在日本法庭上的意见陈述.jpg",
+				"url_title": "20161102_案发现场发生了争执？_08_凤凰网_江秋莲2017年在日本法庭上的意见陈述.jpg",
+				"width": "1080"
+			}
+		],
+		"truth_posts": [
+			{
+				"_key": "bdb01c7be026",
+				"_type": "posts_urlObject",
+				"urlField": "https://weibo.com/7527415179/LjwMMvVnm",
+				"url_title": "灰石微博"
+			}
+		]
+	},
+	{
+		"_createdAt": "2023-01-28T08:51:54Z",
+		"_id": "drafts.3ed4f672-241c-4f21-86c9-a78092f6fc13",
+		"_rev": "525b6cd8-443b-4c7b-82f2-79bda5086448",
+		"_type": "rumor",
+		"_updatedAt": "2023-01-28T09:19:14Z",
+		"importance": 4,
+		"question": "刘鑫误导道中认为江歌是同性恋？",
+		"rumor": "刘鑫曾表达“三叔跟我的表白”，“无数次想要公布我和三叔的真正关系”，试图误导大众认为江歌是同性恋。",
+		"rumor_spreader": ["网络"],
+		"rumor_victim": ["刘鑫"],
+		"tags": ["同性恋"],
+		"truth": "刘鑫在上观新闻的采访中做了澄清，否认误导大众认为江歌是同性恋的说辞。\n\n刘暖曦：根本不存在。江歌说的“I love you 少女”就像我们平时说的“亲爱的”。我只是想说我们关系很铁，很亲近。我们之前会用日语说，我好喜欢你，或者用英语简单表达一下。我说的表白不是那种情侣之间的表白，她想偏激了。\n从聊天内容里，我能感觉出来，我搬去住之后给了江歌很大的心理安慰。可能就是普普通通下班或者是写完作业回家的路上，她会给我发，“少女，你能陪着我，我真的很开心”之类的信息。有的时候她自己在家钻牛角尖，或者觉得孤独了，也会给我发信息，我知道她肯定是心情不好才会发这样的信息给我。被朋友需要，我也很开心，我更愿意对她好一点。我会特意去超市买点甜品回去。\n",
+		"truth_images": [
+			{
+				"_key": "f0f72b1f8927",
+				"_type": "image_urlObject",
+				"height": "1576",
+				"urlField": "https://am3pap007files.storage.live.com/y4mtB_hcQmvKBb_SuA_X29ynMPKFwyZApl2cQf9PBHoAK2uw22tO5CQXkC9PRwfA2ZV62j6xXx8gncQumAvbObBFhuuk6g5umgKVtPGXGGmHUcTEsrfAnxnxlnwYSI2l6cXY2keQksnEzQINHv6mqYjB5J73gSvF6SyAUDRYdWl7z_Q3VQ_bkhu18jiE7Lz_lPS?width=516&height=1576&cropmode=none",
+				"url_title": "1",
+				"width": "516"
+			},
+			{
+				"_key": "78ee504d7d78",
+				"_type": "image_urlObject",
+				"height": "1600",
+				"urlField": "https://am3pap007files.storage.live.com/y4msB-vEc22uwWIbC8VKanhvVMhQwygYPR9llN2o1z-5ds6PrJil1Mdo2gv7ekOn83JtoUneq_NK_CeQkpXcQimkDCihEC36zH1N-5hxldnZi9cS3pFyt41C8gDmzXxdbYdxmIhFhphK2ANhJHmUMAjyQSu4t8a4EpH1PAZiEHWhYgIlmR4OXzb1TSsBc8yUU5P?width=720&height=1600&cropmode=none",
+				"url_title": "2",
+				"width": "720"
+			}
+		],
+		"truth_posts": [
+			{
+				"_key": "48fa56038c56",
+				"_type": "posts_urlObject",
+				"urlField": "/voices/shangguan_news_report",
+				"url_title": "上观新闻采访刘鑫"
+			}
+		]
+	},
+	{
+		"_createdAt": "2023-01-16T11:10:29Z",
+		"_id": "5167d4a8-2ee4-43e4-b18c-abc484097a9d",
+		"_rev": "A9c2r37bIxLrznUpmMwOey",
+		"_type": "rumor",
+		"_updatedAt": "2023-01-28T08:56:21Z",
+		"importance": 4,
+		"question": "刘鑫没有劝阻过江歌不要与陈世峰激烈争吵？",
+		"rumor": "江歌与陈世峰争吵，刘鑫从未劝阻过，甚至还鼓励纵容，为的是拿江歌当枪，故意害江歌。",
+		"rumor_images": [
+			{
+				"_key": "e1332dc0bf0f",
+				"_type": "image_urlObject",
+				"height": "720",
+				"urlField": "5谣言澄清/文字图片/20161102_微信_江歌刘鑫_刘鑫让江歌进门不要吵_01.jpg",
+				"url_title": "20161102_微信_江歌刘鑫_刘鑫让江歌进门不要吵_01",
+				"width": "405"
+			}
+		],
+		"rumor_victim": ["刘鑫"],
+		"tags": ["争吵", "劝阻"],
+		"truth": "刘鑫进行过劝阻：“三叔，不要和他吵。”刘鑫对江陈争吵的态度是反对而不是纵容。"
+	},
+	{
+		"_createdAt": "2023-01-17T15:20:50Z",
+		"_id": "drafts.b3288d40-b2ae-4a4a-ac00-f5603772873f",
+		"_rev": "db163873-dc54-4dee-9907-1b5b67c3191a",
+		"_type": "rumor",
+		"_updatedAt": "2023-01-24T07:22:58Z",
+		"importance": 5,
+		"question": "刘鑫说血馄饨很好吃刺激江秋莲",
+		"rumor": "刘鑫说血馄饨刺激江秋莲",
+		"rumor_spreader": ["网络"],
+		"rumor_victim": ["刘鑫"],
+		"tags": ["血馄饨"],
+		"truth": "江秋莲在凌晨发消息问刘鑫，江歌带给你的血馄饨好吃吗？\n刘鑫回答：应该会很好吃。\n江回答：好吃你就多吃点。\n\n江把这份截图发出长文，《江歌给刘鑫带了一份血馄饨，刘鑫说好吃》，把挑衅的人换成了刘鑫。\n\n在和冷眼的五小时对话中，刘鑫提到曾多次被江半夜问血馄饨。\n\n2019年清明，已经托管了刘鑫账号的冷眼，当时和刘鑫在一起，亲眼看到江这些骚扰信息，感到厌烦，并用刘鑫的账号回击了同样的一句话。\n\n江秋莲清明发文声称被刘鑫以血馄饨侮辱，刘鑫账号被封。\n\n",
+		"truth_images": [
+			{
+				"_key": "def29c26ca6c",
+				"_type": "image_urlObject",
+				"height": "1960",
+				"urlField": "5谣言澄清/文字图片/20170606_微信_江秋莲刘鑫_血馄饨_01.jpg",
+				"url_title": "20170606_微信_江秋莲刘鑫_血馄饨_01",
+				"width": "1080"
+			},
+			{
+				"_key": "ad1214a0da86",
+				"_type": "image_urlObject",
+				"height": "316",
+				"urlField": "5谣言澄清/文字图片/20170903_微博_刘鑫_血馄饨_01.jpg",
+				"url_title": "20170903_微博_刘鑫_血馄饨_01",
+				"width": "592"
+			},
+			{
+				"_key": "7d038b749e3a",
+				"_type": "image_urlObject",
+				"height": "4080",
+				"urlField": "5谣言澄清/图像图片/20161102_微博等_江歌同学等_血馄饨合集.jpg",
+				"url_title": "20161102_微博等_江歌同学等_血馄饨合集",
+				"width": "719"
+			},
+			{
+				"_key": "bbc807379841",
+				"_type": "image_urlObject",
+				"urlField": "5谣言澄清/文字图片/20161102_微信_江歌刘鑫_刘鑫让江歌进门不要吵_01.jpg",
+				"url_title": "20161102_微信_江歌刘鑫_刘鑫让江歌进门不要吵_01"
+			}
+		],
+		"truth_posts": []
+	},
+	{
+		"_createdAt": "2023-01-17T15:57:01Z",
+		"_id": "d06ac003-bf8d-4007-a7e8-c077368220f6",
+		"_rev": "B2fwdoKxWxkI0kBn0FiU2z",
+		"_type": "rumor",
+		"_updatedAt": "2023-01-18T22:35:24Z",
+		"importance": 4,
+		"question": "刘鑫是不是开911的白富美",
+		"rumor": "刘鑫自夸白富美，开法拉利911，江歌遇害后在某平台开直播当网红收打赏赚的盆满钵满。",
+		"rumor_images": [
+			{
+				"_key": "b6aa2df6f7de",
+				"_type": "image_urlObject",
+				"height": "2796",
+				"urlField": "5谣言澄清/文字图片/微博_假刘鑫微博_01.png",
+				"url_title": "微博_假刘鑫微博_01",
+				"width": "1290"
+			},
+			{
+				"_key": "0f60418b344a",
+				"_type": "image_urlObject",
+				"height": "2796",
+				"urlField": "5谣言澄清/图像图片/微博_假刘鑫微博_02.png",
+				"url_title": "微博_假刘鑫微博_02",
+				"width": "1290"
+			},
+			{
+				"_key": "390fedf50260",
+				"_type": "image_urlObject",
+				"height": "2796",
+				"urlField": "5谣言澄清/图像图片/微博_假刘鑫微博_03.png",
+				"url_title": "微博_假刘鑫微博_03",
+				"width": "1290"
+			},
+			{
+				"_key": "eaaca3ec4830",
+				"_type": "image_urlObject",
+				"height": "2796",
+				"urlField": "5谣言澄清/文字图片/微博_假刘鑫微博_04.png",
+				"url_title": "微博_假刘鑫微博_04",
+				"width": "1290"
+			},
+			{
+				"_key": "5fa77cbd4f20",
+				"_type": "image_urlObject",
+				"height": "2796",
+				"urlField": "5谣言澄清/文字图片/20210420_腾讯新闻_假刘鑫微博_01.png",
+				"url_title": "20210420_腾讯新闻_假刘鑫微博_01",
+				"width": "1290"
+			}
+		],
+		"rumor_spreader": ["假刘鑫账号"],
+		"rumor_victim": ["刘鑫"],
+		"tags": ["有钱", "假刘鑫"],
+		"truth": "刘鑫第一个微博账号“刘鑫6_6”存续于17-5-28至19-12-22，此后至22-8-27刘鑫全网无公开账号，没有直播，而网上出现了很多假冒刘鑫的账号，炫富，发表过激言论来给刘鑫招黑。其中“证人刘鑫”这个账号在某博主的评论区似乎暴露了自己的真实身份。\n此外，刘鑫父亲卖菜，母亲待业在家。与江歌俩人同是普通家庭，在日期间为节省开支，时常打工至晚上十一二点，同时需兼顾学业。2023年生命权纠纷案判决刘鑫需要赔偿70万，而名下财产只有5万。",
+		"truth_images": [
+			{
+				"_key": "d230ee83b87d",
+				"_type": "image_urlObject",
+				"height": "829",
+				"urlField": "5谣言澄清/文字图片/20170528_微博_刘鑫_刘鑫真实微博声明_01.jpeg",
+				"url_title": "20170528_微博_刘鑫_刘鑫真实微博声明_01",
+				"width": "656"
+			},
+			{
+				"_key": "cc08cf95a6ed",
+				"_type": "image_urlObject",
+				"height": "2072",
+				"urlField": "5谣言澄清/文字图片/20220104_微博_假刘鑫_在小小脚婆微博评论.jpg",
+				"url_title": "20220104_微博_假刘鑫_在小小脚婆微博评论",
+				"width": "1440"
+			},
+			{
+				"_key": "79133639fc76",
+				"_type": "image_urlObject",
+				"height": "2796",
+				"urlField": "5谣言澄清/文字图片/20191222_微博_微博管理员_关闭刘鑫6_6账号.png",
+				"url_title": "20191222_微博_微博管理员_关闭刘鑫6_6账号",
+				"width": "1290"
+			},
+			{
+				"_key": "09b290d18984",
+				"_type": "image_urlObject",
+				"height": "2796",
+				"urlField": "5谣言澄清/文字图片/20230104_微博_微博管理员_L-N-X-wisteria为刘鑫6_6转世账号.png",
+				"url_title": "20230104_微博_微博管理员_L-N-X-wisteria为刘鑫6_6转世账号",
+				"width": "1290"
+			}
+		]
+	},
+	{
+		"_createdAt": "2023-01-16T10:41:17Z",
+		"_id": "drafts.a9f069be-4985-4fd9-9f06-d3ebf2055fec",
+		"_rev": "3e4540e4-24be-472a-ba57-1a74bbf90a7d",
+		"_type": "rumor",
+		"_updatedAt": "2023-01-18T22:34:54Z",
+		"importance": 4,
+		"question": "刘鑫给江秋莲寄鸽子肉刺激江秋莲？",
+		"rumor": "网传刘鑫给江秋莲寄鸽子肉。",
+		"rumor_spreader": ["网络"],
+		"rumor_victim": ["刘鑫"],
+		"tags": ["鸽子肉", "冷眼"],
+		"truth": "寄鸽子肉是网友冷眼萌叔所为。",
+		"truth_images": [
+			{
+				"_key": "70d66f75c813",
+				"_type": "image_urlObject",
+				"height": "397",
+				"urlField": "5谣言澄清/图像图片/20180210_微博_冷眼萌叔_鸽子肉_01.jpg",
+				"url_title": "20180210_微博_冷眼萌叔_鸽子肉_01",
+				"width": "262"
+			}
+		]
+	},
+	{
+		"_createdAt": "2023-01-15T08:52:08Z",
+		"_id": "dcafd601-d407-4ccf-97de-3dec92c1d10d",
+		"_rev": "cErYPm8jN2l5u8GxbRpeqY",
+		"_type": "rumor",
+		"_updatedAt": "2023-01-15T17:35:59Z",
+		"importance": 4,
+		"question": "陈世峰威胁刘鑫不和好就不顾一切？",
+		"rumor": "黄乐平在13分钟小视频中说道：被激怒而离开的陈世峰开始显现杀机，19：04，陈世峰向刘鑫发出通牒： “如果你跟他好了，我会不顾一切”",
+		"rumor_images": [
+			{
+				"_key": "61a70be8f18b",
+				"_type": "image_urlObject",
+				"height": "990",
+				"urlField": "5谣言澄清/图像图片/20210415_新闻发布会_黄乐平_13小视频截图不顾一切_01.png",
+				"url_title": "20210415_新闻发布会_黄乐平_13小视频截图不顾一切_01",
+				"width": "1914"
+			}
+		],
+		"rumor_spreader": ["黄乐平"],
+		"rumor_victim": ["刘鑫", "陈世峰"],
+		"tags": ["不顾一切"],
+		"truth": "陈世峰的原话是“不顾一切追回来”。陈世峰对刘鑫表达了希望好好谈谈的想法，并约刘鑫第二天在大东会馆聊一聊，刘鑫答应以后有空闲可以。随后陈世峰说出了后半句话“不顾一切追回来”",
+		"truth_images": [
+			{
+				"_key": "50932d6477fd",
+				"_type": "image_urlObject",
+				"height": "1334",
+				"urlField": "5谣言澄清/文字图片/20161102_微信_刘鑫陈世峰_不顾一切追回来_01.png",
+				"url_title": "20161102_微信_刘鑫陈世峰_不顾一切追回来_01",
+				"width": "750"
+			},
+			{
+				"_key": "75d279eff299",
+				"_type": "image_urlObject",
+				"height": "1334",
+				"urlField": "5谣言澄清/文字图片/20161102_微信_刘鑫陈世峰_不顾一切追回来_02.png",
+				"url_title": "20161102_微信_刘鑫陈世峰_不顾一切追回来_02",
+				"width": "750"
+			},
+			{
+				"_key": "8bd62a134aff",
+				"_type": "image_urlObject",
+				"height": "1334",
+				"urlField": "5谣言澄清/文字图片/20161102_微信_刘鑫陈世峰_不顾一切追回来_03.png",
+				"url_title": "20161102_微信_刘鑫陈世峰_不顾一切追回来_03",
+				"width": "750"
+			}
+		]
+	},
+	{
+		"_createdAt": "2022-12-25T20:10:44Z",
+		"_id": "ca978098-164d-4222-a9d1-38688ab389fd",
+		"_rev": "p6PbaoiHbhlYLWwV4WRbrP",
+		"_type": "rumor",
+		"_updatedAt": "2023-01-12T19:40:44Z",
+		"importance": 4,
+		"question": "刘鑫因为害怕要求江歌“你快回来”予以解围吗？",
+		"rumor": "在《江歌母亲诉刘鑫案律师代理词》一文中，黄乐平代理律师表示“2016年11月2日下午，被告刘鑫的前男友陈世峰寻求与刘鑫的复合，前往江歌公寓要求与刘鑫见面，刘鑫因为害怕要求江歌“你快回来”予以解围。”",
+		"rumor_images": [
+			{
+				"_key": "51cab007ebd7",
+				"_type": "image_urlObject",
+				"height": "842",
+				"urlField": "https://am3pap007files.storage.live.com/y4mcWFMnFzYT1D9LQZJqKaloMh-PuxB_ZF3tFfmtkAV-4VBS6p9Lcv2ngmrAJxeFxsbjV8AqLtmHB56_FRS7rPclhSDHf1vvFy6KUX2SlmDzaNV3t8fdnFwhyOnmW-4lOb7l7UaaTLd8g_ic5h8RHWAqntIVoMuU-JbPWuCITDJSnATKasEI-dsIvVvrJ4TDeo-?width=563&height=842&cropmode=none",
+				"url_title": "黄乐平_刘鑫要求江歌回家予以解围",
+				"width": "563"
+			}
+		],
+		"rumor_spreader": ["黄乐平"],
+		"rumor_victim": ["刘鑫"],
+		"truth": "微信对话记录清楚显示是江歌先主动提出“我回家！”，刘鑫才回答“你快回来”，刘鑫并未提出要求。而且江歌当晚要参加学校组织的研讨聚餐，她需要回公寓拿书及准备东西，即使没有陈世峰上门事件，江歌也需要回公寓。刘鑫晚上打工19：00开始，15：03发给江歌的微信对话中也明确说过“五点半出门”，因为江歌赶去参加晚上的活动，因此刘鑫和江歌一同于16：20左右提前1小时10分钟出门，也证明江歌并非特意为刘鑫才回公寓。",
+		"truth_images": [
+			{
+				"_key": "807af95c58bf",
+				"_type": "image_urlObject",
+				"height": "1334",
+				"urlField": "https://am3pap007files.storage.live.com/y4mlVRq6QnZwHdMSFtO7FCSxtzmSNSrqQ2XWVe1luKPGQrKdfFBYObZMr0TRILhS7fA3m0FlkwoMUFzfetP6AWlNevgv0TOykNa8jO-AJGbbTKTax7vb-50Cq0mMd2vc6-aEA2yoSi5OHVFztzcVc_LS4S8jkWeauNHOKDJZaYnVquiHoG2APQ-DkXtvq_PeW7p?width=750&height=1334&cropmode=none",
+				"url_title": "刘鑫江歌对话01",
+				"width": "750"
+			},
+			{
+				"_key": "02734d1145ea",
+				"_type": "image_urlObject",
+				"height": "1334",
+				"urlField": "https://am3pap007files.storage.live.com/y4mIyqSQxME48_z2VT3zlqHDEg__4rzlBL1lRM1uHDQquGGFGsXWOx3zXndbgPi8nGcyySpVBalNizkk0imG8R4lykxmNPoQJ3R3iJ81233nonTa9_PK583KXoKxESphGlglwbZiPlFsDADKUvpHgO9l7wXgwTCUmEAykdfwfZITInY6HrNP_VCJLG5RfV27vub?width=750&height=1334&cropmode=none",
+				"url_title": "刘鑫江歌对话02",
+				"width": "750"
+			}
+		]
+	},
+	{
+		"_createdAt": "2022-12-24T17:07:23Z",
+		"_id": "f64acec1-8f1b-46c5-b0e1-747b6ad2ecef",
+		"_rev": "cErYPm8jN2l5u8Gxb5ANNF",
+		"_type": "rumor",
+		"_updatedAt": "2023-01-12T19:40:12Z",
+		"importance": 4,
+		"question": "江歌死前跟陈世峰进行殊死搏斗为了保护刘鑫？",
+		"rumor": "江歌死前为了保护刘鑫跟陈世峰殊死搏斗。\n",
+		"rumor_images": [
+			{
+				"_key": "11caf391fc7f",
+				"_type": "image_urlObject",
+				"height": "413",
+				"urlField": "5谣言澄清/文字图片/20170525_江歌妈妈微信公众号_江秋莲_殊死搏斗_01.jpg",
+				"url_title": "20170525_江歌妈妈微信公众号_江秋莲_殊死搏斗_01",
+				"width": "606"
+			}
+		],
+		"rumor_posts": [
+			{
+				"_key": "4812b501ba53",
+				"_type": "posts_urlObject",
+				"urlField": "https://mp.weixin.qq.com/s/wAw-k1PdUYqvzcghpS_G3A",
+				"url_title": "20170525_江歌妈妈微信公众号文章《天理何在？人性何在？做人应该如何对待救命恩人？》"
+			}
+		],
+		"rumor_spreader": ["江秋莲"],
+		"tags": ["案发现场"],
+		"truth": "陈世峰背后偷袭江歌，捂嘴后迅速作案。6号致命伤是从右侧刺入，陈世峰右手持刀，所以此时江歌是背对着陈世峰。从尸检照片也可看出，江歌手部伤口并不是所谓殊死搏斗的痕迹。",
+		"truth_posts": [
+			{
+				"_key": "c5d7874ed6df",
+				"_type": "posts_urlObject",
+				"urlField": "/casefiles/investigation_report5",
+				"url_title": "搜查报告书-被害人江歌的死因"
+			}
+		]
+	},
+	{
+		"_createdAt": "2022-12-25T20:22:53Z",
+		"_id": "a9e3f5e7-2994-4b91-b79f-70bb55c320ad",
+		"_rev": "E9fLvas2m3hP211bd8otgb",
+		"_type": "rumor",
+		"_updatedAt": "2023-01-06T21:59:13Z",
+		"importance": 4,
+		"question": "江歌于16:18左右到达大内公寓帮助刘鑫解围吗？",
+		"rumor": "在《江歌母亲诉刘鑫案律师代理词》一文中，黄乐平代理律师表示“随后江歌于16:18左右到达大内公寓帮助刘鑫解围，并要求在家门口骚扰滋事的陈世峰离开。”",
+		"rumor_images": [
+			{
+				"_key": "04bb8d047c68",
+				"_type": "image_urlObject",
+				"height": "626",
+				"urlField": "https://am3pap007files.storage.live.com/y4mEy_Rx_kCe7F0_h3kbaYZhF8Aae7eQ-sps7PMFVKFOPgDBcDPaWxqSBFL8N_6LxeXgE43U7QIFzFByMy3ecyvDIeg6gQYYBNOYEnduDniQZsjAW1_WRUSk-CpVNVvAaaVUtfr3OPHscfmm_64AzpBoGVJia9e3cse0OINUu4wSYy3T-u5e1fDQX0yhL9H363z?width=558&height=626&cropmode=none",
+				"url_title": "黄乐平_江歌1618解围",
+				"width": "558"
+			}
+		],
+		"rumor_posts": [
+			{
+				"_key": "d83eeebf1c8b",
+				"_type": "posts_urlObject",
+				"urlField": "/voices/huangleping_statement",
+				"url_title": "江歌母亲诉刘鑫案律师代理词"
+			}
+		],
+		"rumor_spreader": ["黄乐平"],
+		"rumor_victim": ["刘鑫"],
+		"tags": ["江陈争吵"],
+		"truth": "江歌实际在15：54之前就已到达公寓并与陈世峰激烈争吵，从而潜在地导致陈世峰危险性升级。",
+		"truth_images": [
+			{
+				"_key": "c7b80f83ad04",
+				"_type": "image_urlObject",
+				"height": "1081",
+				"urlField": "https://am3pap007files.storage.live.com/y4mwJoYk5vQOqWNs0jTKFU9xou3aYS06_e6CKrPtDRMjhAffx5h_vUEQXNoryW7KP22YF54KoqNbkvnG_qAdFdqwGFUz1NkWlIDMZkVlqFL7v2EjgFOl4jELBCjfn7Q29oFchr1iSiI-V7Xy78wU84EwTEYdKa22VVEntvr_MNBf3lPkt_xMUcU0DP5AFZeoC8G?width=1920&height=1081&cropmode=none",
+				"url_title": "局面_1554江歌陈世峰争吵",
+				"width": "1920"
+			}
+		],
+		"truth_posts": [
+			{
+				"_key": "3a9ce466cdc9",
+				"_type": "posts_urlObject",
+				"urlField": "http://t.cn/A662ldS1",
+				"url_title": "东方新报独家：走访东京中野江歌遇害现场（图文）"
+			}
+		]
+	},
+	{
+		"_createdAt": "2022-12-25T20:22:16Z",
+		"_id": "fb46ec3f-5f04-4ff3-87f5-10d5d1ef39b8",
+		"_rev": "M3Ws3Z0qDWySaabuERNKvX",
+		"_type": "rumor",
+		"_updatedAt": "2023-01-06T21:57:57Z",
+		"importance": 5,
+		"question": "刘鑫有阻止江歌明确报警吗？",
+		"rumor": "在《江歌母亲诉刘鑫案律师代理词》一文中，黄乐平代理律师表示“在意识到具有暴力倾向的陈世峰骚扰住宅可能带来的危险性时，江歌明确表示“我要报警”，但被刘鑫所阻止”。",
+		"rumor_images": [
+			{
+				"_key": "306d4de4c2fe",
+				"_type": "image_urlObject",
+				"height": "548",
+				"urlField": "https://am3pap007files.storage.live.com/y4meOwcuy-13gGV5S0pbqx16LE_NPyUw5luiENCjSiEw1Of8KMb6HahJ7Gwj6FODQGBpVTkgS88zYJZP0BfHVjsIIt7jVoCGBC2gTNdO5o49YEhjfo-uYZuW_9v_G-lIUilX0Gb1YoUJShdvvu7kb9l_D_7rJ7YgEMdSkc3_FVSjqExQMzvYChBLvMxoDv9iZuv?width=561&height=548&cropmode=none",
+				"url_title": "黄乐平代理词",
+				"width": "561"
+			}
+		],
+		"rumor_posts": [
+			{
+				"_key": "625d523edc91",
+				"_type": "posts_urlObject",
+				"urlField": "/voices/huangleping_statement",
+				"url_title": "江歌母亲诉刘鑫案律师代理词"
+			}
+		],
+		"rumor_spreader": ["黄乐平"],
+		"rumor_victim": ["刘鑫"],
+		"truth": "刘鑫先于江歌提过2次报警，江歌明确表示“无视”、“一会就会走的”。在江歌回公寓与陈世峰发生激烈争吵之前，陈世峰并未表现出暴力倾向。刘鑫提醒江歌“不想把事情闹大”、“不要多说话”，但江歌无视提醒回到公寓仍以争吵方式刺激陈世峰，说明江歌并不真的认为陈世峰具有暴力倾向，而且刘鑫一直在屋内并无危险。江歌自身存在经济压力并在同住期间多次表示需要刘鑫陪伴，江歌作为租房协议的签订人在邀请刘鑫之初就知道合租不合法，刘鑫提议不报警、江歌放弃报警的共同原因都是希望能继续同住，刘鑫没有也无法阻止江歌报警，实际上刘鑫另住并无困难也更方便省钱。",
+		"truth_images": [
+			{
+				"_key": "f96a8bead976",
+				"_type": "image_urlObject",
+				"height": "1334",
+				"urlField": "https://am3pap007files.storage.live.com/y4md40imUzjdqCwYYFlvChyxwJXz8ZN9FSpGu6nzjrlNsDa0uWe__U4qjy1dfVRTv_18Y51diGDfLF_N8uG7gNcwgm2dofh-SKf5duizRh62IsyW0Nk1HeTgVOldDUxmE6-hG5qAzD40ybwDng0DgThOF91_wuwk9FAzR2f-0VgLhJcEAdu_QGdF5C_2eq8oXPh?width=750&height=1334&cropmode=none",
+				"url_title": "刘鑫江歌对话01",
+				"width": "750"
+			},
+			{
+				"_key": "a480a5d28ad3",
+				"_type": "image_urlObject",
+				"height": "1334",
+				"urlField": "https://am3pap007files.storage.live.com/y4mQItCwrjo2N3eh65D-PJwbyqJYu-tz3vLkdo0MSdkvdWOs8krwJIMTtBBB7jumfYYmkc1G-Qzy5W-QKXyR41JwJkONE4sABJ4GPbR1xD15eajxUIxQjuhHQ3a10-SYtaEYREgL7omL6dU3TMXKJOy5P8VaVzAYPgzm99Nt0Wjn-bdgTd1so3wu865nOj-rF40?width=750&height=1334&cropmode=none",
+				"url_title": "刘鑫江歌对话02",
+				"width": "750"
+			}
+		]
+	},
+	{
+		"_createdAt": "2023-01-05T16:47:13Z",
+		"_id": "a691358e-010d-4839-8c50-d62d20a7a8d9",
+		"_rev": "AXInD2eZ3alsl8A9mCK2ah",
+		"_type": "rumor",
+		"_updatedAt": "2023-01-06T21:56:46Z",
+		"importance": 3,
+		"question": "刘鑫对近70万赔偿款发起网络募捐",
+		"rumor": "江秋莲在微博发文披露，刘暖曦（曾用名：刘鑫）正对法院判决的赔偿款发起网络募捐。",
+		"rumor_images": [
+			{
+				"_key": "470b1b441a83",
+				"_type": "image_urlObject",
+				"height": "625",
+				"urlField": "5谣言澄清/文字图片/20230103_微博热搜_中国新闻网_刘鑫对近70万赔偿款发起网络募捐.png",
+				"url_title": "20230103_微博热搜_中国新闻网_刘鑫对近70万赔偿款发起网络募捐",
+				"width": "890"
+			}
+		],
+		"rumor_spreader": ["媒体"],
+		"tags": ["募捐", "热搜"],
+		"truth": "二审宣判刘鑫需要赔偿江秋莲70W元，部分网友觉得刘鑫很可怜，自发给刘鑫的文章打赏，刘鑫也写道：会自己扛，不怕吃苦，什么脏活累活都可以干。对网友主动的资助一定会公示并还回去。",
+		"truth_images": [
+			{
+				"_key": "8cef58b9a62b",
+				"_type": "image_urlObject",
+				"height": "886",
+				"urlField": "5谣言澄清/文字图片/20230102_微博_刘鑫_最后的话节选债务部分_01.jpg",
+				"url_title": "20230102_微博_刘鑫_最后的话节选债务部分_01",
+				"width": "1170"
+			}
+		]
+	},
+	{
+		"_createdAt": "2022-12-25T20:57:54Z",
+		"_id": "e76e52d6-1dee-41ff-a323-e54bfcf2a1bb",
+		"_rev": "uBZyzL1oEJWqYeY7qzFcQq",
+		"_type": "rumor",
+		"_updatedAt": "2023-01-03T20:15:24Z",
+		"importance": 5,
+		"question": "刘鑫捏造新恋情激怒陈世峰而不告知江歌吗？",
+		"rumor": "在《江歌母亲诉刘鑫案律师代理词》一文中，黄乐平代理律师表示“刘鑫自始至终都没有就来自陈世峰的暴力威胁向江歌吐露一个字，也没有告知江歌她本人害怕的真实原因以及当天下午她如何捏造新恋情而激怒陈世峰的事情，更没有向江歌透露有关陈世峰已经到达大内公寓附近并要对其实施伏击的危险”。",
+		"rumor_images": [
+			{
+				"_key": "2f7b4b8d24f7",
+				"_type": "image_urlObject",
+				"height": "483",
+				"urlField": "https://am3pap007files.storage.live.com/y4mq7eGA7bWmQ8MZsKp1l5UBxkrfmWY22DjB3pe_3Rfy3azzME0UtBPrLI1gee_3h_M1KA2QGfe_HvFCCQibX6wcXZBp-YwAAEgfq6SYFwdXxTA4f_lnEyXj0NCOz_vysa0m3OiTd0tGzOqmqpe9yBnBpGJA29TAMzu3y2cfhHqPeAvzIeTrUsxsK9LkTevftm_?width=563&height=483&cropmode=none",
+				"url_title": "江歌母亲诉刘鑫案律师代理词",
+				"width": "563"
+			}
+		],
+		"rumor_posts": [
+			{
+				"_key": "64116b5f5594",
+				"_type": "posts_urlObject",
+				"urlField": "/media/huangleping_video",
+				"url_title": "江歌母亲诉刘鑫案律师代理词"
+			}
+		],
+		"rumor_spreader": ["黄乐平"],
+		"rumor_victim": ["刘鑫"],
+		"tags": ["假男友"],
+		"truth": "江歌刘鑫下午16：20左右出门，陈世峰跟随2人步行前往车站。江歌16：29发信息给身边的刘鑫“太恶心了 说你有男朋友了”，刘鑫16：30发信息给同事小林请求帮忙假扮男友，江歌明确知道此事，3人16：33到达车站。18：10左右刘鑫同事小林配合假扮男友，陈世峰随后离开。“假男友”事件实际上是江歌提出，刘鑫受启发而为。",
+		"truth_images": [
+			{
+				"_key": "87b61aa891dc",
+				"_type": "image_urlObject",
+				"height": "1334",
+				"urlField": "https://am3pap007files.storage.live.com/y4mMfEOKoyzo0FFA8-9fJU3PYlkAzTyJibBAjLJakM_K3aJHtu557nA3fCGZB3uIMa1h2T5uJvwzgLbxmZQgkyCkiN5wq8GJbt1NSHetX_4ib4x3braXkotAyAnpkCBKAAOQ4CwCAgs5G3zni2MkjRWP2kElNzbhhbFzRci-jJS9P1HDZvYbiLiA8FbgI9Bdj0Y?width=750&height=1334&cropmode=none",
+				"url_title": "江歌刘鑫对话01",
+				"width": "750"
+			},
+			{
+				"_key": "40869cca9c39",
+				"_type": "image_urlObject",
+				"height": "1334",
+				"urlField": "https://am3pap007files.storage.live.com/y4mrw4Jp-L14IQ5euw5MsUMbLJWAOg2aKVBD65s91Qi0mtKei_ocIize6PFcIwEk7-JJhFfVBvydOL-VEeB6KxtV0j_HPmzmPsZJHw0eAh0BOXjvCix5ehIvokfQC6W1kxbKvKf0S_VqmsBnMTydEiqXiV1wBj7dbJl3bHN0eDRrKqf7Kia_7SkfESBvdrGQPPV?width=750&height=1334&cropmode=none",
+				"url_title": "江歌刘鑫对话02",
+				"width": "750"
+			}
+		]
+	},
+	{
+		"_createdAt": "2022-12-25T07:18:29Z",
+		"_id": "c83f7e79-8357-4063-b921-859c532a7b14",
+		"_rev": "8ycwaKn5PLURgEeFHP7AeS",
+		"_type": "rumor",
+		"_updatedAt": "2022-12-31T12:06:13Z",
+		"importance": 3,
+		"question": "刘鑫为了逃避，不去参加江歌葬礼？",
+		"rumor": "刘鑫为了逃避，不去参加江歌葬礼。",
+		"rumor_posts": [
+			{
+				"_key": "486592c398ff",
+				"_type": "posts_urlObject",
+				"urlField": "https://mp.weixin.qq.com/s/9X2TCeqTJxrwDWiC0BEE9Q",
+				"url_title": "如何评价关于在日留学生江歌被害，网友几乎一致将批判的矛头指向室友-江歌妈妈公众号"
+			}
+		],
+		"tags": ["案后事态"],
+		"truth": "刘鑫主动向江秋莲问起，并表示想去。这也印证了她自己说的没有参加葬礼是因为警察阻拦（后来才从其他渠道了解到是江秋莲身边的翻译的意见）。",
+		"truth_images": [
+			{
+				"_key": "4f1bbdcb2618",
+				"_type": "image_urlObject",
+				"urlField": "5谣言澄清/文字图片/微信_江秋莲_刘鑫江秋莲追悼会聊天记录_01.jpg",
+				"url_title": "微信_江秋莲_刘鑫江秋莲追悼会聊天记录_01"
+			}
+		]
+	},
+	{
+		"_createdAt": "2022-12-24T15:47:08Z",
+		"_id": "035b163a-4bf3-47a8-9ffc-19bae42e72a0",
+		"_rev": "8ycwaKn5PLURgEeFHP4rGw",
+		"_type": "rumor",
+		"_updatedAt": "2022-12-31T11:50:46Z",
+		"importance": 3,
+		"question": "案发当晚江歌应刘鑫要求在车站等待？",
+		"rumor": "江秋莲代理律师黄乐平，在其制作的13分钟“案情还原”视频里称：23：13，刘鑫要求江歌等自己，本准备马上回家的江歌因此在车站等到凌晨。",
+		"rumor_images": [
+			{
+				"_key": "d92d0dac77af",
+				"_type": "image_urlObject",
+				"height": "720",
+				"urlField": "5谣言澄清/文字图片/20161102_案发当晚江歌应刘鑫要求在车站等待？/20161102_江歌主动等待刘鑫35分钟_01_13分视频_黄乐平称：23：13刘鑫要求江歌等自己.jpg",
+				"url_title": "20161102_江歌主动等待刘鑫35分钟_01_13分视频_黄乐平称：23：13刘鑫要求江歌等自己",
+				"width": "1280"
+			},
+			{
+				"_key": "b60f87de694b",
+				"_type": "image_urlObject",
+				"height": "720",
+				"urlField": "5谣言澄清/文字图片/20161102_案发当晚江歌应刘鑫要求在车站等待？/20161102_江歌主动等待刘鑫35分钟_02_13分视频_黄乐平称：本准备马上回家的江歌因此在车站等了1小时.jpg",
+				"url_title": "20161102_江歌主动等待刘鑫35分钟_02_13分视频_黄乐平称：本准备马上回家的江歌因此在车站等了1小时",
+				"width": "1280"
+			},
+			{
+				"_key": "0f9e77ac2323",
+				"_type": "image_urlObject",
+				"height": "413",
+				"urlField": "5谣言澄清/文字图片/20170525_江歌妈妈微信公众号_江秋莲_江歌等刘鑫两小时_01.jpg",
+				"url_title": "20170525_江歌妈妈微信公众号_江秋莲_江歌等刘鑫两小时_01",
+				"width": "606"
+			}
+		],
+		"rumor_posts": [
+			{
+				"_key": "70ec77c397a8",
+				"_type": "posts_urlObject",
+				"urlField": "/media/huangleping_video",
+				"url_title": "江母方公布13分钟“还原视频”"
+			}
+		],
+		"rumor_spreader": ["江秋莲、黄乐平"],
+		"rumor_victim": ["刘鑫"],
+		"tags": ["案前剧情"],
+		"truth": "日方卷宗内监控资料显示，江歌22：38已从东中野站出站。（江秋莲一方隐瞒了该部分卷宗资料）\n\n结合微信，可知江歌出站后主动开始等刘鑫，并未马上回家。\n\n江歌21：11开始反复询问，刘鑫一直未回复，23：13江告知刘“我现在在车站”后，刘回复“你等我一下吧”。此时江歌已主动等待35分钟。\n\n细看江23点前、后的不同问话，说明她知道刘下班时间，也知道刘在凌晨才能返回东中野。江长时间未得回复却坚持不回8分钟外的公寓，说明江歌在21：11时已决定等到凌晨。\n\n另外，案发前的通话中，江秋莲警告江歌“小心他打你”。\n\n案发前8分钟，江秋莲表示“两个女孩一起就放心了”。\n\n从江刘微信及国内一审江秋莲方的主张可知，江歌未把江秋莲的警告“小心他打你”告知刘鑫。江主动等刘到底是纯粹保护，还是等刘共担风险？\n",
+		"truth_images": [
+			{
+				"_key": "6022a16be188",
+				"_type": "image_urlObject",
+				"height": "8496",
+				"urlField": "5谣言澄清\\文字图片\\20161102_案发当晚江歌应刘鑫要求在车站等待？\\20161102_案发当晚江歌应刘鑫要求在车站等待？.jpg",
+				"url_title": "20161102_案发当晚江歌应刘鑫要求在车站等待？.jpg",
+				"width": "1080"
+			},
+			{
+				"_key": "19cb2d81bcbc",
+				"_type": "image_urlObject",
+				"height": "800",
+				"urlField": "5谣言澄清/文字图片/20161102_案发当晚江歌应刘鑫要求在车站等待？/20161102_江歌主动等待刘鑫35分钟_03_卷宗_刘鑫_江歌22：38从东中野站出站.jpg",
+				"url_title": "20161102_江歌主动等待刘鑫35分钟_03_卷宗_刘鑫_江歌22：38从东中野站出站",
+				"width": "1073"
+			},
+			{
+				"_key": "7da02a344c8a",
+				"_type": "image_urlObject",
+				"height": "1287",
+				"urlField": "5谣言澄清/文字图片/20161102_案发当晚江歌应刘鑫要求在车站等待？/20161102_江歌主动等待刘鑫35分钟_04_微信_刘鑫_江21：11开始反复询问，刘一直未回复.jpg",
+				"url_title": "20161102_江歌主动等待刘鑫35分钟_04_微信_刘鑫_江21：11开始反复询问，刘一直未回复",
+				"width": "750"
+			},
+			{
+				"_key": "38123959e87e",
+				"_type": "image_urlObject",
+				"height": "1293",
+				"urlField": "5谣言澄清/文字图片/20161102_案发当晚江歌应刘鑫要求在车站等待？/20161102_江歌主动等待刘鑫35分钟_05_微信_刘鑫_江23点前、后不同问话说明她知道刘下班时间.jpg",
+				"url_title": "20161102_江歌主动等待刘鑫35分钟_05_微信_刘鑫_江23点前、后不同问话说明她知道刘下班时间",
+				"width": "750"
+			},
+			{
+				"_key": "75c62441176c",
+				"_type": "image_urlObject",
+				"height": "1292",
+				"urlField": "5谣言澄清/文字图片/20161102_案发当晚江歌应刘鑫要求在车站等待？/20161102_江歌主动等待刘鑫35分钟_06_微信_刘鑫_23：13江告知刘“我现在在车站”后，刘回复“你等我一下吧”.jpg",
+				"url_title": "20161102_江歌主动等待刘鑫35分钟_06_微信_刘鑫_23：13江告知刘“我现在在车站”后，刘回复“你等我一下吧”",
+				"width": "750"
+			},
+			{
+				"_key": "8e3d6b424868",
+				"_type": "image_urlObject",
+				"height": "596",
+				"urlField": "5谣言澄清/文字图片/20161102_案发当晚江歌应刘鑫要求在车站等待？/20161102_江歌主动等待刘鑫35分钟_07_凤凰网_案发前的通话中，江秋莲警告江歌“小心他打你”.jpg",
+				"url_title": "20161102_江歌主动等待刘鑫35分钟_07_凤凰网_案发前的通话中，江秋莲警告江歌“小心他打你”",
+				"width": "1080"
+			},
+			{
+				"_key": "5d22f9806c2f",
+				"_type": "image_urlObject",
+				"height": "338",
+				"urlField": "5谣言澄清/文字图片/20161102_案发当晚江歌应刘鑫要求在车站等待？/20161102_江歌主动等待刘鑫35分钟_08_凤凰网_案发前8分钟，江秋莲表示“两个女孩一起就放心了”.jpg",
+				"url_title": "20161102_江歌主动等待刘鑫35分钟_08_凤凰网_案发前8分钟，江秋莲表示“两个女孩一起就放心了”",
+				"width": "1080"
+			}
+		],
+		"truth_posts": []
+	},
+	{
+		"_createdAt": "2022-12-24T09:13:59Z",
+		"_id": "250af508-fef5-47de-becf-4736813130a0",
+		"_rev": "8ycwaKn5PLURgEeFHOzDwB",
+		"_type": "rumor",
+		"_updatedAt": "2022-12-31T11:36:02Z",
+		"importance": 3,
+		"question": "她和朋友去聚会吃饭……这时离江歌去世才2个月，尸骨未寒？",
+		"rumor": "咪蒙公众号在2017.11.12的文章《刘鑫江歌案: 法律可以制裁凶手，但谁来制裁人性》发了刘鑫和朋友的合影，并写道“她和朋友去聚会吃饭……这时离江歌去世才2个月，尸骨未寒。”之后江秋莲在微博中转发。",
+		"rumor_images": [
+			{
+				"_key": "2e5503552e5f",
+				"_type": "image_urlObject",
+				"height": "2302",
+				"urlField": "5谣言澄清/图像图片/20171223_微博_江秋莲_转发迷蒙图片_01.jpg",
+				"url_title": "20171223_微博_江秋莲_转发迷蒙图片_01",
+				"width": "1000"
+			}
+		],
+		"rumor_posts": [
+			{
+				"_key": "7d1e5900dd52",
+				"_type": "posts_urlObject",
+				"urlField": "https://weibo.com/ttarticle/p/show?id=2309404545765493309503",
+				"url_title": "咪蒙丨刘鑫江歌案: 法律可以制裁凶手，但谁来制裁人性？"
+			}
+		],
+		"rumor_spreader": ["咪蒙", "江秋莲"],
+		"rumor_victim": ["刘鑫"],
+		"tags": ["案后事态"],
+		"truth": "这张照片本是刘鑫，江歌与另一朋友的合影，咪蒙（或江秋莲）故意遮住江歌头像污蔑刘鑫在江歌去世不久开心与朋友聚会。\n",
+		"truth_images": [
+			{
+				"_key": "3b46fc1713e6",
+				"_type": "image_urlObject",
+				"height": "1655",
+				"urlField": "5谣言澄清/图像图片/20171112_微信公众号_咪蒙_刘鑫与江歌合影.jpg",
+				"url_title": "20171112_微信公众号_咪蒙_刘鑫与江歌合影",
+				"width": "720"
+			}
+		]
+	},
+	{
+		"_createdAt": "2022-12-24T15:09:24Z",
+		"_id": "958e5b6b-9f4c-480c-96f5-b4aad58d9e3d",
+		"_rev": "Pf6WA3QqVnnbHhbAQtXvHe",
+		"_type": "rumor",
+		"_updatedAt": "2022-12-31T11:35:37Z",
+		"importance": 5,
+		"question": "凶杀现场，刘鑫对着门外的陈世峰叫“我把门锁了，你不要闹了”？",
+		"rumor": "凶杀现场，刘鑫锁上门对着门外的陈世峰叫“把门锁了，你不要骂了”",
+		"rumor_images": [
+			{
+				"_key": "dd680bb97a69",
+				"_type": "image_urlObject",
+				"height": "2115",
+				"urlField": "5谣言澄清/文字图片/20171211_澎湃新闻_门锁了不要再骂了_01.jpg",
+				"url_title": "20171211_澎湃新闻_门锁了不要再骂了_01",
+				"width": "1079"
+			},
+			{
+				"_key": "3d7ae15e3e1c",
+				"_type": "image_urlObject",
+				"height": "3246",
+				"urlField": "5谣言澄清/文字图片/20171212_微博_凤凰卫视_把门锁了你不要骂了_01.jpg",
+				"url_title": "20171212_微博_凤凰卫视_把门锁了你不要骂了_01",
+				"width": "1080"
+			}
+		],
+		"rumor_posts": [],
+		"tags": ["凶案现场"],
+		"truth": "刘鑫在笔录和庭审中都指出了报警录音中说的是“把门锁了，你不要闹了”，因为当时认为门被江歌从外面锁上了。",
+		"truth_images": [
+			{
+				"_key": "74b991df3051",
+				"_type": "image_urlObject",
+				"urlField": "影音资料/江歌案刘鑫报警录音中文字幕.mp4",
+				"url_title": "江歌案刘鑫报警录音中文字幕"
+			}
+		]
+	},
+	{
+		"_createdAt": "2022-12-24T15:57:45Z",
+		"_id": "91a48018-bcaa-43e3-b725-eb91b398b107",
+		"_rev": "8ycwaKn5PLURgEeFHOhhYR",
+		"_type": "rumor",
+		"_updatedAt": "2022-12-31T09:48:14Z",
+		"importance": 4,
+		"question": "江歌收留无家可归的刘鑫？",
+		"rumor": "江歌在刘鑫和陈世峰分手后收留了刘鑫。\n",
+		"rumor_images": [
+			{
+				"_key": "a53a1c63e2c1",
+				"_type": "image_urlObject",
+				"height": "295",
+				"urlField": "5谣言澄清/文字图片/20201103_ 江歌妈妈微信公众号_江秋莲_收留刘鑫_01.jpg",
+				"url_title": "20201103_ 江歌妈妈微信公众号_江秋莲_收留刘鑫_01.jpg",
+				"width": "691"
+			}
+		],
+		"rumor_posts": [
+			{
+				"_key": "36e1e3caddce",
+				"_type": "posts_urlObject",
+				"urlField": "https://mp.weixin.qq.com/s/L85gEq2qGl_OyXm_qqvv9Q",
+				"url_title": "江歌被害四年间-江歌妈妈公众号"
+			}
+		],
+		"rumor_spreader": ["江秋莲"],
+		"rumor_victim": ["刘鑫"],
+		"tags": ["案前剧情"],
+		"truth": "刘鑫交给江歌房租，两人为合租室友。",
+		"truth_images": [
+			{
+				"_key": "791c031d5e69",
+				"_type": "image_urlObject",
+				"height": "1334",
+				"urlField": "5谣言澄清/文字图片/20161010_微信_江歌刘鑫_房租_01.jpg",
+				"url_title": "20161010_微信_江歌刘鑫_房租_01",
+				"width": "750"
+			}
+		]
+	},
+	{
+		"_createdAt": "2022-12-25T20:37:15Z",
+		"_id": "fccd9db6-9665-4179-93bc-4db8c4577c0f",
+		"_rev": "Pf6WA3QqVnnbHhbAQtDzio",
+		"_type": "rumor",
+		"_updatedAt": "2022-12-31T09:42:09Z",
+		"importance": 4,
+		"question": "陈世峰与刘鑫有在拉面店门口争执吗？",
+		"rumor": "在《江歌母亲诉刘鑫案律师代理词》一文中，黄乐平代理律师表示“在拉面店门口，陈世峰与刘鑫面对面站着相距1米左右，再次发生争执。”",
+		"rumor_images": [
+			{
+				"_key": "4e0a258d6089",
+				"_type": "image_urlObject",
+				"height": "635",
+				"urlField": "https://am3pap007files.storage.live.com/y4mv3IdDYy1qAYwjwxBJg3INZZKOswSUu9WsHejC-RqCM3R8FqWwSK55ZcDKKlVFRhjb2CG7heaQTBKGVASnwvJ1KxPc1PCQgi8H_9jC446X03cNjev0HLDkQQ2xghAlrzQKC_HLemAvldVxetLS0Y6gBeBH2kqxgY7971xHAvSkc6pHbLPYwCKpCAht3rOY8Z5?width=561&height=635&cropmode=none",
+				"url_title": "黄乐平_刘鑫陈世峰面馆发生争执",
+				"width": "561"
+			}
+		],
+		"rumor_posts": [
+			{
+				"_key": "c962b52fcd37",
+				"_type": "posts_urlObject",
+				"urlField": "/voices/huangleping_statement",
+				"url_title": "江歌母亲诉刘鑫案律师代理词"
+			}
+		],
+		"rumor_spreader": ["黄乐平"],
+		"rumor_victim": ["刘鑫"],
+		"tags": ["刘陈争吵"],
+		"truth": "日本庭审记录出示的林先生笔录中，陈世峰未与刘鑫发生争执。东京高岛平拉面店“清家”店员林先生笔录（部分）： “11月2日下午，刘鑫给我发微信，说前男友来我家，一直跟着我。你帮帮我吧。她提早来到店里。在吧台上坐下哭了。我在厨房里忙，没功夫和她说话。店长大野过去问他怎么啦。刘说，前男友来找她，地址被暴露了。我后来也去安慰她。我6点完工，走出店。看到刘和陈在店门口说话。陈戴着口罩。刘来到我身边，让我装作她的男友。我照做了。我，店长和刘一起走到附近的药妆店。我还和刘到车站附近麦当劳坐了会儿。刘对我说，她有喜欢的人了，不想复合。”",
+		"truth_images": [
+			{
+				"_key": "8d1a376b5117",
+				"_type": "image_urlObject",
+				"height": "1080",
+				"urlField": "https://am3pap007files.storage.live.com/y4mIO0VqhJmyxcXIMAxPfHUmXH7lhkEbvfBvlWuiQoC1ZWSUUGg0nCrXIZi56J3idpxfErfoXxM0yF7vljl9YYR31ZHfqVhxaKkX920e-33Mk9w759qI0Ba8xpsBnu9ho1CURtVPa_r0puS7OjGrObOWnCaBsLsN7UkhFMuILSl_UHCyfb0Go8Z0ERwRwubEN7u?width=1920&height=1080&cropmode=none",
+				"url_title": "黄乐平13分钟视频",
+				"width": "1920"
+			},
+			{
+				"_key": "5bc80a004077",
+				"_type": "image_urlObject",
+				"urlField": "影音资料/江歌遇害前10个小时究竟发生了什么.mp4",
+				"url_title": "13分钟视频原帖"
+			}
+		],
+		"truth_posts": [
+			{
+				"_key": "a9928f6287c2",
+				"_type": "posts_urlObject",
+				"urlField": "https://weibo.com/ttarticle/p/show?id=2309404184281218997430",
+				"url_title": "江歌案庭审第二日下午庭审文字实录！"
+			}
+		]
+	},
+	{
+		"_createdAt": "2022-12-25T20:10:15Z",
+		"_id": "e21aa7e0-3af0-428a-ac6d-fa940dfe5823",
+		"_rev": "uBZyzL1oEJWqYeY7qdnQjM",
+		"_type": "rumor",
+		"_updatedAt": "2022-12-31T09:32:02Z",
+		"importance": 4,
+		"question": "江歌勉强同意刘鑫的居住请求吗？",
+		"rumor": "在《江歌母亲诉刘鑫案律师代理词》一文中，黄乐平律师表示“考虑到被告当时的苦难处境，江歌勉强答应了被告的请求，同意被告借助”。",
+		"rumor_images": [
+			{
+				"_key": "6c7f6a52ed7d",
+				"_type": "image_urlObject",
+				"height": "554",
+				"urlField": "https://am3pap007files.storage.live.com/y4m5N-PEuKFhsVhTv20Y4XBajwq_vUA9KjVg7Dkr3-CiXOtm6K9RHDdHOkqtxCu2sEI7EZu0KO25nM9ggmNJqhCvBFfuHg3YG4vFmeKQsKPpp7nvfVsNXCtuYBmcsJcNogZWTl3wVhpFM6HUVDhN7QCy3EPJ4VG3poA9h4_upNAFeFCU6JcqFdKwoO1qKlrqT0n?width=560&height=554&cropmode=none",
+				"url_title": "黄乐平_江歌勉强接受刘鑫借住",
+				"width": "560"
+			}
+		],
+		"rumor_posts": [
+			{
+				"_key": "be66bf88a085",
+				"_type": "posts_urlObject",
+				"urlField": "/voices/huangleping_statement",
+				"url_title": "江歌母亲诉刘鑫案律师代理词"
+			}
+		],
+		"rumor_spreader": ["黄乐平"],
+		"rumor_victim": ["江歌", "刘鑫"],
+		"tags": ["借住环境"],
+		"truth": "刘鑫8月26日离开陈世峰公寓，9月2日才与搬去与江歌同住，期间并非睡大街，刘鑫同事女孩小宋也热情邀请刘鑫同住，刘鑫没有任何困难。去东中野与江歌同住，刘鑫打工往返2.5小时，上学往返3.5小时，交通费也高，刘鑫没有理由主动去东中野居住。两人同住期间，江歌曾经手头紧张要用超市积分买早餐，刘鑫在江歌没钱时主动提出先花她的钱，江歌与刘鑫同住期间还多次表示需要刘鑫陪伴。",
+		"truth_images": [
+			{
+				"_key": "268cbbc0eeee",
+				"_type": "image_urlObject",
+				"height": "345",
+				"urlField": "https://am3pap007files.storage.live.com/y4miTEgL2aH6EY5YFw1sKr3AoCurboDJraYX3WCk48jl27PyIuzzGmvBy3NEmki8KJb149IE-aVBfFW9FrrWcz-giQkOnFN5t-ESB_1KlM2l6hT9MRjxasDyJjYB9fVHT-tBBZitRBCm4PUjaWG474Lvpp43pTvYmjlCG8slIcn4B8EcA4TIKKEqN-5ZQ2So31u?width=467&height=345&cropmode=none",
+				"url_title": "对话01",
+				"width": "467"
+			},
+			{
+				"_key": "6bcf3661face",
+				"_type": "image_urlObject",
+				"height": "316",
+				"urlField": "https://am3pap007files.storage.live.com/y4mjF4kwzj87uHc9mS5I8eSEnZFgyytS35VocfYHB_jFe--CurfFscvAvjod4H6dAyR3wa-eJVF0YoNdCNGlbcLn2UVlU9YY8qrov7bZYBXGCLWXgW2RomiYFULYZiTKfxJjyJT21V97kU-DrlZZESoLkkz5HnKs4diKmd9AvdyyXHmQxA8SPqCmPft37ZFxe9B?width=178&height=316&cropmode=none",
+				"url_title": "对话02",
+				"width": "178"
+			},
+			{
+				"_key": "7b0e87e9efb0",
+				"_type": "image_urlObject",
+				"height": "314",
+				"urlField": "https://am3pap007files.storage.live.com/y4mKolHhP7P4R96nC8qGaURZYLsv2ODNYvupJJnfb97BHnbykNrQEsIUwUX9VBBvuTtNmDjHwvh4vhgKcY-Sj4nt_-qwSr6Pzs4nTgetXxxeD7XKGi5IAULjCtDjrDR8yT5VEO7AT8Z7ng8JN0dxxyxokHd6xvHvz3Jo175I46pahftbunoL3I3RalM6JLgp_uB?width=177&height=314&cropmode=none",
+				"url_title": "对话04",
+				"width": "177"
+			},
+			{
+				"_key": "dbfbb3c27497",
+				"_type": "image_urlObject",
+				"height": "317",
+				"urlField": "https://am3pap007files.storage.live.com/y4m5ujyTtfxCTh9oB5Ohd0yK8mtxpqiFmSvTaTfvIO2L75CIpZXZL7dFOrS9Wlu6MJDOgvTLPfOV6vb1B3Q54Mb685wtwBptsTZUOdObZgy3xesGnjUixtoluMhjtfoxnwieETPGq-09hlrrzvYGxgJqFuwmmjY0Ibtwfz6jsLxERP0Y-nyzsH0QVeMBDUBfLDN?width=178&height=317&cropmode=none",
+				"url_title": "对话03",
+				"width": "178"
+			}
+		]
+	},
+	{
+		"_createdAt": "2022-12-23T15:19:07Z",
+		"_id": "61e9a9cf-3376-4384-8939-44158453dfeb",
+		"_rev": "uBZyzL1oEJWqYeY7qdmSQA",
+		"_type": "rumor",
+		"_updatedAt": "2022-12-31T09:25:36Z",
+		"importance": 4,
+		"question": "刘鑫家人事发后没有主动联系江秋莲？",
+		"rumor": "江秋莲不止一次在公共平台称刘鑫家人没有联系和安慰过她一句",
+		"rumor_images": [
+			{
+				"_key": "0894127c97ec",
+				"_type": "image_urlObject",
+				"height": "2408",
+				"urlField": "5谣言澄清/文字图片/20170602_微信公众号江歌妈妈_江秋莲_谴责刘鑫全家_01.jpg",
+				"url_title": "20170602_微信公众号江歌妈妈_江秋莲_谴责刘鑫全家_01",
+				"width": "1080"
+			}
+		],
+		"rumor_spreader": ["江秋莲"],
+		"rumor_victim": ["刘家人"],
+		"tags": ["案后事态"],
+		"truth": "事发后刘鑫妈妈安慰了江秋莲，并让刘鑫爸爸陪同江秋莲去日本。",
+		"truth_images": [
+			{
+				"_key": "195946695fca",
+				"_type": "image_urlObject",
+				"height": "1025",
+				"urlField": "5谣言澄清/文字图片/20161104_短信_刘鑫妈妈_安慰江秋莲_01.jpg",
+				"url_title": "20161104_短信_刘鑫妈妈_安慰江秋莲_01",
+				"width": "960"
+			}
+		]
+	}
+]
