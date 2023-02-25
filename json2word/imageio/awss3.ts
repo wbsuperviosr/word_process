@@ -1,6 +1,6 @@
 // import S3 from "aws-sdk/clients/s3";
 import { S3 } from "@aws-sdk/client-s3";
-import { keyid, secret, accountid } from "./credential";
+import { keyid, secret, accountid } from "../../credential";
 
 const fs = require("fs");
 

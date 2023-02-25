@@ -269,8 +269,12 @@ class DocX(metaclass=abc.ABCMeta):
         self.upload_task.append(task)
 
     @cached_property
-    def paragraphs(self) -> list[bs4.element.Tag]:
+    def all_paragraphs(self) -> list[Paragraph]:
         return [Paragraph(p, self) for p in self.body.find_all("w:p", recursive=False)]
+
+    @cached_property
+    def paragraphs(self) -> list[Paragraph]:
+        return self.all_paragraphs
 
     @cached_property
     def document(self) -> bs4.element.Tag:
@@ -331,7 +335,9 @@ class DocX(metaclass=abc.ABCMeta):
 
     @cached_property
     def json(self) -> list[Mapping]:
-        return [p.json for p in self.paragraphs]
+        fm = self.front_matter.copy()
+        fm.update({"event": [p.json for p in self.paragraphs]})
+        return fm
 
     @cached_property
     def image_name(self) -> str:
@@ -373,6 +379,14 @@ class CasefileParser(ArticleParser):
         )
         return {v: k for k, v in map.items()}
 
+    @cached_property
+    def paragraphs(self) -> list[Paragraph]:
+        return [p for p in self.all_paragraphs if p.p.find("w:drawing") is None]
+
+    @cached_property
+    def images(self) -> list[Paragraph]:
+        return [p for p in self.all_paragraphs if p.is_image]
+
     @property
     def endpoint(self) -> str:
         return f"6部分卷宗/{self.field_map['标题']}"
@@ -401,5 +415,5 @@ class PostParser(ArticleParser):
         return f"3观者评说/{self.field_map['作者']/{self.field_map['标题']}}"
 
 
-docx = PostParser.fromfile("mswords/post/支持刘鑫的人怎么想的【1定义优先】.docx")
+docx = CasefileParser.fromfile("mswords/casefile/220_公审第1回检方陈述.docx")
 print(docx.json)
