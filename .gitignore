@@ -2,5 +2,6 @@ node_modules
 images
 mswords
 credential.ts
+credential.json
 **.pyc
 **.7z
