@@ -1,7 +1,8 @@
 import sizeOf from "image-size";
 import { ExternalHyperlink, ImageRun, Paragraph } from "docx";
 
-const fs = require("fs");
+// const fs = require("fs");
+import * as fs from "fs";
 
 export function transformSize(height: any, width: any, size: number = 100) {
 	let ratio = height / width;

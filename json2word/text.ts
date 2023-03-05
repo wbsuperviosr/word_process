@@ -16,7 +16,7 @@ import {
 	FootnoteReferenceRun,
 } from "docx";
 import { downloadImage } from "./imageio/download";
-import { Child, Body, MarkDef } from "./models/postModel";
+import { Child, Body, MarkDef } from "./models/base";
 import { transformSize } from "./image";
 import { inferParagraphSpacing } from "./utils";
 import sizeOf from "image-size";
@@ -47,7 +47,7 @@ export function linkTextParagraph(
 ) {
 	let hyperlink = link.startsWith("http")
 		? link
-		: `https://liuxin.express${link}`;
+		: `https://liuxin.express/${link}`;
 	const paragraph = new Paragraph({
 		children: [
 			new ExternalHyperlink({
@@ -113,7 +113,7 @@ async function makeTextBodyParagraphRun(
 		await downloadImage(
 			image_dir,
 			`${image_name}_${mark_def._key}.jpg`,
-			mark_def.href
+			mark_def.href!
 		);
 
 		let savePath = `${image_dir}/${image_name}_${mark_def._key}.jpg`;
@@ -141,11 +141,11 @@ async function makeTextBodyParagraphRun(
 				},
 			},
 		});
-		if (mark_def.href.startsWith("http")) {
+		if (mark_def.href!.startsWith("http")) {
 			return [
 				new ExternalHyperlink({
 					children: [run],
-					link: mark_def.href,
+					link: mark_def.href!,
 				}),
 			];
 		}
@@ -168,13 +168,12 @@ async function makeTextBodyParagraphRun(
 					underline: { type: UnderlineType.SINGLE },
 				});
 			} else {
-				// console.log(mark, mark_defs);
 				let mark_type = getMarkType(mark, mark_defs);
 				switch (mark_type._type) {
 					case "link":
 						Object.assign(style, { style: "Hyperlink" });
-						hyperlink = mark_type.href.startsWith("http")
-							? mark_type.href
+						hyperlink = mark_type.href!.startsWith("http")
+							? mark_type.href!
 							: `https://liuxin.express${mark_type.href}`;
 						break;
 
@@ -216,7 +215,7 @@ export async function makeTextBodyParagraph(
 		);
 	}
 
-	const para_style = makeParagraphStyle(body.style, style_map);
+	const para_style = makeParagraphStyle(body.style!, style_map);
 	const spacing = inferParagraphSpacing(para_style);
 	const paragraph = new Paragraph({
 		children: runs,

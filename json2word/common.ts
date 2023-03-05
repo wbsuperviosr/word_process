@@ -1,7 +1,8 @@
 import { Table, Paragraph, TableRow, WidthType } from "docx";
-import { CaseFile } from "./models/casefilesModel";
-import { Post, Body } from "./models/postModel";
-import { Timeline } from "./models/timelineModel";
+import { Casefile } from "./models/casefile";
+import { Body } from "./models/base";
+import { Article } from "./models/article";
+import { Timeline } from "./models/timeline";
 import { inferRelativeHeadingMap } from "./utils";
 import { makeImageParagraph } from "./image";
 import { makeTextBodyParagraph } from "./text";
@@ -49,7 +50,7 @@ export function dateToString(date: Date | string) {
 }
 
 export function makeFrontMatter(
-	data: CaseFile | Post | Timeline,
+	data: Casefile | Article | Timeline,
 	fn: (data: any) => TableRow[]
 ) {
 	const table = new Table({
@@ -60,20 +61,20 @@ export function makeFrontMatter(
 }
 
 export function makeImageBody(
-	data: Timeline | CaseFile,
+	data: Timeline | Casefile,
 	nameRule: (data: any) => string,
 	size: number = 100
 ) {
 	let savePath = nameRule(data);
 	let paragraphs: Paragraph[] = [];
-	if (data.image_urls) {
-		for (let index = 0; index < data.image_urls.length; index++) {
+	if (data.imageUrls) {
+		for (let index = 0; index < data.imageUrls!.length; index++) {
 			let filename = `${savePath}_${index}.jpg`;
 			paragraphs.push(
 				makeImageParagraph(
 					filename,
 					size,
-					data.image_urls[index].urlField
+					data.imageUrls[index].urlField
 				)
 			);
 		}
