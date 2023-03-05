@@ -6,11 +6,11 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"about": "ts-node json2word/cli.ts -t about",
-		"timeline": "ts-node json2word/cli.ts -t timeline -c",
-		"post": "ts-node json2word/cli.ts -t post -c",
-		"voice": "ts-node json2word/cli.ts -t voice -c",
-		"casefile": "ts-node json2word/cli.ts -t casefile -c",
-		"media": "ts-node json2word/cli.ts -t media -c"
+		"timeline": "ts-node json2word/cli.ts -t timeline",
+		"post": "ts-node json2word/cli.ts -t post",
+		"voice": "ts-node json2word/cli.ts -t voice",
+		"casefile": "ts-node json2word/cli.ts -t casefile",
+		"media": "ts-node json2word/cli.ts -t media"
 	},
 	"author": "Michael",
 	"license": "ISC",

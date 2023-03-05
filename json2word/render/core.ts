@@ -66,6 +66,13 @@ export type IDocxConfig = {
 type RunType = TextRun | ImageRun | ExternalHyperlink;
 type DocType = Casefile | Timeline | Article | Rumor;
 
+import * as enzh from "../../EnZh.json";
+
+const dict = new Map();
+for (const [key, value] of Object.entries(enzh)) {
+	dict.set(key, value);
+}
+
 export abstract class DocxCore {
 	fontFamily: string = "Microsoft YaHei";
 	fontSize: number = 22;
@@ -87,36 +94,37 @@ export abstract class DocxCore {
 		let rows: TableRow[] = [];
 		for (const [key, item] of Object.entries(doc)) {
 			const literal = this.fieldMap.get(key);
+			const ckey = dict.get(key) ? dict.get(key) : key;
 			switch (literal) {
 				case "string":
 					rows.push(
-						await this.tableRow(key, [this.textParagraph(item)])
+						await this.tableRow(ckey, [this.textParagraph(item)])
 					);
 					break;
 				case "number":
 					rows.push(
-						await this.tableRow(key, [
+						await this.tableRow(ckey, [
 							this.textParagraph(String(item)),
 						])
 					);
 					break;
 				case "boolean":
 					rows.push(
-						await this.tableRow(key, [
+						await this.tableRow(ckey, [
 							this.textParagraph(String(item)),
 						])
 					);
 					break;
 				case "listString":
 					rows.push(
-						await this.tableRow(key, [
+						await this.tableRow(ckey, [
 							this.textParagraph(item.join(",")),
 						])
 					);
 					break;
 				case "slug":
 					rows.push(
-						await this.tableRow(key, [
+						await this.tableRow(ckey, [
 							this.textParagraph(item.current),
 						])
 					);
@@ -125,7 +133,7 @@ export abstract class DocxCore {
 					if (this.bodyInFM) {
 						rows.push(
 							await this.tableRow(
-								key,
+								ckey,
 								await this.renderBodies(item as Body[])
 							)
 						);
@@ -133,14 +141,14 @@ export abstract class DocxCore {
 					break;
 				case "listArticleUrl":
 					rows.push(
-						await this.tableRow(key, this.renderArticleUrls(item))
+						await this.tableRow(ckey, this.renderArticleUrls(item))
 					);
 					break;
 				case "listImageUrl":
 					if (this.imageInFM) {
 						rows.push(
 							await this.tableRow(
-								key,
+								ckey,
 								await this.renderImageUrls(item)
 							)
 						);
@@ -149,7 +157,7 @@ export abstract class DocxCore {
 				case "datetime":
 					let date = new Date(item);
 					rows.push(
-						await this.tableRow(key, [
+						await this.tableRow(ckey, [
 							this.textParagraph(date.toLocaleDateString()),
 						])
 					);
@@ -157,7 +165,6 @@ export abstract class DocxCore {
 				default:
 					logger.error(`unknown literal ${key}`);
 					throw new Error(`unknown literal ${key}`);
-					break;
 			}
 		}
 		return new Table({

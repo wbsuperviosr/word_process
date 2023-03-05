@@ -25,7 +25,7 @@ const ParseConfig: ParseArgsConfig = {
 			type: "string",
 			short: "n",
 		},
-		cache_image: {
+		no_cache: {
 			type: "boolean",
 			short: "c",
 		},
@@ -44,7 +44,7 @@ const ParseConfig: ParseArgsConfig = {
 
 const buildArgs = () => {
 	let args = parseArgs(ParseConfig);
-	let { type, title, cache_image, output_dir, image_dir } = args.values;
+	let { type, title, no_cache, output_dir, image_dir } = args.values;
 	if (!type) {
 		throw new Error("you must provide the document type");
 	}
@@ -53,7 +53,7 @@ const buildArgs = () => {
 		docType: type as string,
 		outputDir: output_dir ? (output_dir as string) : "mswords",
 		imageDir: image_dir ? (image_dir as string) : "images",
-		cacheImage: cache_image ? (cache_image as boolean) : false,
+		cacheImage: no_cache ? true : false,
 	};
 	return [type, title, config];
 };
