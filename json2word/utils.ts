@@ -1,16 +1,82 @@
 import { HeadingLevel } from "docx";
-import { Body } from "./models/postModel";
+import { Body, Child, MarkDef } from "./models/base";
+import * as path from "node:path";
 
 export const styleMapping = new Map<number, HeadingLevel>();
 for (const [index, value] of Object.values(HeadingLevel).entries()) {
 	styleMapping.set(index, value);
 }
 
+export function isImageRun(child: Child, mark_defs: MarkDef[]) {
+	for (const mark of child.marks) {
+		let mark_type = mark_defs.filter((mark_def) => mark_def._key == mark);
+		if (mark_type.length == 0) {
+			return false;
+		} else {
+			let m = mark_type[0];
+			if (m._type == "imagelink") {
+				return true;
+			}
+		}
+	}
+	return false;
+}
+
+export function makeParagraphStyle(
+	style: string,
+	style_map: Map<string, HeadingLevel>
+) {
+	if (style.startsWith("h")) {
+		return { heading: style_map.get(style) };
+	} else if (style == "blockquote") {
+		return { bullet: { level: 0 } };
+	} else {
+		return { style: "Normal" };
+	}
+}
+
+export function getMarkTypeByKey(mark: string, mark_defs: MarkDef[]) {
+	const type = mark_defs.filter((mark_def) => mark_def._key == mark)[0];
+	return type;
+}
+
+export function getMarkTypeByType(mark: string, mark_defs: MarkDef[]) {
+	const type = mark_defs.filter((mark_def) => mark_def._type == mark)[0];
+	return type;
+}
+
+export const sleep = (s: number) => new Promise((r) => setTimeout(r, s * 1000));
+
+export function urlize(href: string, basename: string) {
+	if (href.startsWith("http")) {
+		return new URL(href);
+	}
+
+	let url = new URL(path.join(basename, path.normalize(String.raw`${href}`)));
+
+	return url;
+}
+
+export function transformSize(height: any, width: any, size: number = 100) {
+	let ratio = height / width;
+	return [size, size * ratio];
+}
+
+export function getImageExt(name: string) {
+	let ext = name.split(".").pop();
+	if (ext) {
+		if (["jpeg", "jpg", "png", "gif"].includes(ext)) {
+			return ext;
+		}
+	}
+	return "jpg";
+}
+
 export function inferRelativeHeadingMap(bodies: Body[]) {
 	const styles: Number[] = [];
 	for (const body of bodies) {
-		if (body.style.startsWith("h")) {
-			styles.push(Number(body.style.slice(1)));
+		if (body.style!.startsWith("h")) {
+			styles.push(Number(body.style!.slice(1)));
 		}
 	}
 	let style_num = [...new Set(styles)].sort();
@@ -37,3 +103,5 @@ export function inferParagraphSpacing(para_style: {
 		}
 	}
 }
+
+export function inferReference(bodies: Body[]) {}
