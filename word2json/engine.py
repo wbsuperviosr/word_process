@@ -4,46 +4,18 @@ import bs4
 import io
 import re
 import zipfile
-import string
-import random
 from enum import Enum
-from typing import Mapping
 from functools import cached_property
 from pprint import pprint
 from PIL import Image
+import requests
 
 import json
-from urllib.parse import urlparse
-from pathlib import PurePosixPath
-
-random.seed(123)
+from word2json.utils import infer_hyperlink_category, genKey
+from word2json.tracker import DocTracker
 
 
-def infer_hyperlink_category(url: str):
-    url = urlparse(url)
-    if url.hostname == "liuxin.express":
-        path = PurePosixPath(url.path)
-        match path.parts[1]:
-            case "voices":
-                return "观者评说"
-            case "casefiles":
-                return "部分卷宗"
-            case "rumor":
-                return "辟谣问答"
-            case "media":
-                return "影音合集"
-            case "posts":
-                return "暖曦话语"
-            case "timeline":
-                return "时光回溯"
-            case _:
-                return "更多阅读"
-    else:
-        return "外部阅读"
-
-
-def genKey(length=10):
-    return "".join(random.choices(string.ascii_letters + string.digits, k=length))
+SECRETS = json.load(open("credential.json", "r"))
 
 
 def parse_fm_field(string: str):
@@ -61,6 +33,15 @@ def parse_fm_field(string: str):
             return True
     else:
         return string
+
+
+class DocumentType(Enum):
+    Casefile = "casefiles"
+    Voice = "voice"
+    Rumor = "rumor"
+    Timeline = "timeline"
+    Post = "post"
+    Developer = "dev"
 
 
 class ParagraphType(Enum):
@@ -125,7 +106,7 @@ class Run(object):
         return self._markDefs
 
     @property
-    def json(self) -> Mapping:
+    def json(self) -> dict:
         return {
             "_key": self.key,
             "_type": "span",
@@ -163,7 +144,6 @@ class Paragraph(object):
 
     @cached_property
     def is_heading(self):
-        # return self.p.find("w:pStyle", {"w:val": "Heading1"}) is not None
         pstyle = self.p.find("w:pStyle")
         if pstyle is not None and pstyle.get("w:val").startswith("Heading"):
             return True
@@ -216,7 +196,7 @@ class Paragraph(object):
                     return "normal"
 
     @property
-    def json(self) -> Mapping:
+    def json(self) -> dict:
 
         if self.is_image:
             rId = self.p.find("a:blip").get("r:embed")
@@ -236,8 +216,8 @@ class Paragraph(object):
             return {
                 "_key": self.key,
                 "_type": "image_urlObject",
-                "width": image.width,
-                "height": image.height,
+                "width": str(image.width),
+                "height": str(image.height),
                 "urlField": link,
                 "url_title": name,
             }
@@ -257,13 +237,18 @@ class Paragraph(object):
 
 
 class DocX(metaclass=abc.ABCMeta):
-    def __init__(self, package: zipfile.ZipFile) -> None:
+    def __init__(
+        self, package: zipfile.ZipFile, doctype: DocumentType, tracker: DocTracker
+    ) -> None:
         self.package = package
+        self.doctype = doctype
+        self.tracker = tracker
         self.upload_task = []
 
     @classmethod
-    def fromfile(cls, filename: str):
-        return cls(zipfile.ZipFile(filename))
+    def fromfile(cls, filename: str, doctype: DocumentType, tracker: DocTracker = None):
+        tracker = DocTracker() if tracker is None else tracker
+        return cls(zipfile.ZipFile(filename), doctype, tracker)
 
     def regiser_upload_task(self, task):
         self.upload_task.append(task)
@@ -315,7 +300,7 @@ class DocX(metaclass=abc.ABCMeta):
     def parse_table(self, field_name: str, field: bs4.element.Tag):
         match field_name:
             case "slug":
-                return {"slug": {"_type": "slug", "current": field.text}}
+                return {"_type": "slug", "current": field.text}
             case "tags":
                 return re.split("[,，、]", field.text)
             case "related":
@@ -327,6 +312,8 @@ class DocX(metaclass=abc.ABCMeta):
                         "category": infer_hyperlink_category(
                             self.get_reference(l.get("r:id"))
                         ),
+                        "_type": "article_url",
+                        "_key": genKey(10),
                     }
                     for l in links
                 ]
@@ -334,9 +321,11 @@ class DocX(metaclass=abc.ABCMeta):
                 return parse_fm_field(field.text)
 
     @cached_property
-    def json(self) -> list[Mapping]:
+    def json(self) -> list[dict]:
         fm = self.front_matter.copy()
-        fm.update({"event": [p.json for p in self.paragraphs]})
+        fm.update({"body": [p.json for p in self.paragraphs]})
+        fm.update(self.tracker.get_meta(self))
+
         return fm
 
     @cached_property
@@ -345,6 +334,14 @@ class DocX(metaclass=abc.ABCMeta):
 
     def print(self):
         pprint(self.body.prettify())
+
+    def upload(self) -> None:
+        api = f"https://{SECRETS['projectid']}.api.sanity.io/v2021-06-07/data/mutate/production"
+        headers = {"authorization": f"Bearer {SECRETS['sanity']}"}
+        data = {"mutations": [{"createOrReplace": self.json}]}
+
+        response = requests.post(api, headers=headers, data=json.dumps(data))
+        return response
 
 
 class ArticleParser(DocX):
@@ -391,6 +388,12 @@ class CasefileParser(ArticleParser):
     def endpoint(self) -> str:
         return f"6部分卷宗/{self.field_map['标题']}"
 
+    @property
+    def json(self) -> dict:
+        json = super().json
+        json.update({"image_urls": [p.json for p in self.images]})
+        return json
+
 
 class PostParser(ArticleParser):
     @cached_property
@@ -415,5 +418,9 @@ class PostParser(ArticleParser):
         return f"3观者评说/{self.field_map['作者']/{self.field_map['标题']}}"
 
 
-docx = CasefileParser.fromfile("mswords/casefile/220_公审第1回检方陈述.docx")
-print(docx.json)
+# 220_公审第1回检方陈述
+docx = CasefileParser.fromfile(
+    "mswords/casefile/220_公审第1回检方陈述.docx", DocumentType.Developer
+)
+res = docx.upload()
+print(res.json())
