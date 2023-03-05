@@ -41,7 +41,7 @@ export class TimelineEngine extends DocxCore {
 		const docs: Timeline[] = await sanity.get_documents("timeline");
 		docs.sort((a, b) => a.order! - b.order!);
 		let tables: Table[] = [];
-		for (const doc of docs.slice(0, 50)) {
+		for (const doc of docs) {
 			this.imageCount = 0;
 			this.imageName = `${doc.title?.slice(0, 15)}`;
 			tables.push(
