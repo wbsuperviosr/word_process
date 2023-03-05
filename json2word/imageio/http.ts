@@ -1,5 +1,5 @@
-const request = require("node-fetch");
 const fs = require("fs");
+import fetch from "cross-fetch";
 
 export async function downloadImageHTTP(
 	basedir: string,
@@ -17,7 +17,7 @@ export async function downloadImageHTTP(
 	}
 	try {
 		console.log(`Downloading ${savePath}`);
-		const response = await request(link);
+		const response = await fetch(link);
 		const blob = await response.blob();
 		const arrayBuffer = await blob.arrayBuffer();
 		const buffer = Buffer.from(arrayBuffer);
