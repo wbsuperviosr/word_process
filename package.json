@@ -2,9 +2,15 @@
 	"name": "word_process",
 	"version": "1.0.0",
 	"description": "convert json to Mircosoft word",
-	"main": "json2word/casefile.ts",
+	"main": "json2word/cli.ts",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"about": "ts-node json2word/cli.ts -t about",
+		"timeline": "ts-node json2word/cli.ts -t timeline -c",
+		"post": "ts-node json2word/cli.ts -t post -c",
+		"voice": "ts-node json2word/cli.ts -t voice -c",
+		"casefile": "ts-node json2word/cli.ts -t casefile -c",
+		"media": "ts-node json2word/cli.ts -t media -c"
 	},
 	"author": "Michael",
 	"license": "ISC",
@@ -21,6 +27,7 @@
 		"cross-fetch": "^3.1.5",
 		"docx": "^7.8.2",
 		"eslint": "^8.34.0",
-		"image-size": "^1.0.2"
+		"image-size": "^1.0.2",
+		"winston": "^3.8.2"
 	}
 }
