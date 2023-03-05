@@ -1,7 +1,7 @@
 import { Body, Slug, BaseDocument, ImageUrl, ArticleUrl } from "./base";
 
 export interface Casefile extends BaseDocument {
-	body?: Body[];
+	body: Body[];
 	category?: string;
 	description?: string;
 	featured?: boolean;

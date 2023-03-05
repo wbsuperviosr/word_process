@@ -1,7 +1,8 @@
 import { Body, BaseDocument, ArticleUrl, ImageUrl } from "./base";
 
 export interface Timeline extends BaseDocument {
-	body?: Body;
+	title?: string;
+	body?: Body[];
 	category?: string;
 	date?: string;
 	time?: string;
