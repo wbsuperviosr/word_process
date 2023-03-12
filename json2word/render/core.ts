@@ -2,6 +2,7 @@ import {
 	AlignmentType,
 	Document,
 	ExternalHyperlink,
+	FootnoteReferenceRun,
 	HeadingLevel,
 	HorizontalPositionAlign,
 	HorizontalPositionRelativeFrom,
@@ -25,7 +26,6 @@ import {
 
 import {
 	inferRelativeHeadingMap,
-	inferReference,
 	inferParagraphSpacing,
 	isImageRun,
 	getMarkTypeByKey,
@@ -34,6 +34,7 @@ import {
 	transformSize,
 	getImageExt,
 	makeParagraphStyle,
+	inferFootnotes,
 } from "../utils";
 
 import * as fs from "fs";
@@ -48,6 +49,7 @@ import {
 	MarkDef,
 	Slug,
 	FieldStringMap,
+	Reference,
 } from "../models/base";
 import { Service } from "../service";
 import { Casefile } from "../models/casefile";
@@ -61,10 +63,18 @@ export type IDocxConfig = {
 	outputDir: string;
 	imageDir: string;
 	cacheImage: boolean;
+	fromLocal: boolean;
 };
 
-type RunType = TextRun | ImageRun | ExternalHyperlink;
-type DocType = Casefile | Timeline | Article | Rumor;
+export type RunType =
+	| TextRun
+	| ImageRun
+	| ExternalHyperlink
+	| FootnoteReferenceRun;
+export type DocType = Casefile | Timeline | Article | Rumor;
+export type FootnoteType = {
+	[key: string]: { children: Paragraph[] };
+};
 
 import * as enzh from "../../EnZh.json";
 
@@ -81,6 +91,8 @@ export abstract class DocxCore {
 	baseUri: string = "https://liuxin.express";
 	imageUri: string = "https://assets.wbavengers.com";
 	_imageName: string = "";
+	refCount: number = 0;
+	mtime: string = "";
 
 	constructor(public config: IDocxConfig, public service: Service) {
 		this.config = config;
@@ -89,12 +101,16 @@ export abstract class DocxCore {
 
 	abstract get imageInFM(): boolean;
 	abstract get bodyInFM(): boolean;
+	abstract get hasFootnote(): boolean;
 
 	async renderFontMatter(doc: DocType): Promise<Table> {
 		let rows: TableRow[] = [];
 		for (const [key, item] of Object.entries(doc)) {
 			const literal = this.fieldMap.get(key);
 			const ckey = dict.get(key) ? dict.get(key) : key;
+			if (key == "_updatedAt") {
+				this.mtime = item;
+			}
 			switch (literal) {
 				case "string":
 					rows.push(
@@ -158,7 +174,15 @@ export abstract class DocxCore {
 					let date = new Date(item);
 					rows.push(
 						await this.tableRow(ckey, [
-							this.textParagraph(date.toLocaleDateString()),
+							this.textParagraph(date.toISOString()),
+						])
+					);
+					break;
+				case "date":
+					let d = new Date(item);
+					rows.push(
+						await this.tableRow(ckey, [
+							this.textParagraph(d.toLocaleDateString()),
 						])
 					);
 					break;
@@ -228,17 +252,18 @@ export abstract class DocxCore {
 	async renderImageRun(
 		child: Child,
 		markDefs: MarkDef[]
-	): Promise<ImageRun | ExternalHyperlink> {
+	): Promise<ExternalHyperlink[]> {
 		const markDef = getMarkTypeByType("imagelink", markDefs);
-		return this.imageRun(markDef.href!, child.text);
+		return [await this.imageRun(markDef.href!, child.text)];
 	}
 
 	async renderTextRun(
 		child: Child,
 		markDefs: MarkDef[]
-	): Promise<TextRun | ExternalHyperlink> {
+	): Promise<(TextRun | ExternalHyperlink)[]> {
 		let hyperlink: string | undefined = undefined;
 		let style = {};
+		let footnotes: FootnoteReferenceRun[] = [];
 		for (const mark of child.marks) {
 			if (mark == "strong") {
 				Object.assign(style, { bold: true });
@@ -255,16 +280,28 @@ export abstract class DocxCore {
 						Object.assign(style, { style: "Hyperlink" });
 						hyperlink = urlize(mark_type.href!, this.baseUri).href;
 						break;
-
+					case "Citelink":
+						for (
+							let index = 0;
+							index < mark_type.reference.length;
+							index++
+						) {
+							this.refCount += 1;
+							footnotes.push(
+								new FootnoteReferenceRun(this.refCount)
+							);
+						}
+						break;
 					default:
 						break;
 				}
 			}
 		}
-		return this.textRun(child.text, hyperlink, style);
+
+		return [this.textRun(child.text, hyperlink, style), ...footnotes];
 	}
 
-	async renderRun(child: Child, markDefs: MarkDef[]): Promise<RunType> {
+	async renderRun(child: Child, markDefs: MarkDef[]): Promise<RunType[]> {
 		if (isImageRun(child, markDefs)) {
 			return this.renderImageRun(child, markDefs);
 		} else {
@@ -278,7 +315,7 @@ export abstract class DocxCore {
 	): Promise<Paragraph> {
 		let runs: RunType[] = [];
 		for (const child of body.children) {
-			runs.push(await this.renderRun(child, body.markDefs));
+			runs.push(...(await this.renderRun(child, body.markDefs)));
 		}
 		const style = makeParagraphStyle(body.style!, styleMap);
 		const spacing = inferParagraphSpacing(style);
@@ -298,8 +335,6 @@ export abstract class DocxCore {
 	async renderBodies(bodies: Body[]): Promise<Paragraph[]> {
 		let paragraphs: Paragraph[] = [];
 		const headingMap = inferRelativeHeadingMap(bodies);
-		const references = inferReference(bodies);
-
 		for (const body of bodies) {
 			paragraphs.push(await this.renderBody(body, headingMap));
 		}
@@ -334,6 +369,21 @@ export abstract class DocxCore {
 		return paragraphs;
 	}
 
+	renderFootnote(references: Reference[]) {
+		if (references.length == 0) {
+			return {};
+		}
+		const footnotes: FootnoteType = {};
+		for (const [idnex, ref] of references.entries()) {
+			Object.assign(footnotes, {
+				[idnex + 1]: {
+					children: [this.textParagraph(ref.title, ref.urlField)],
+				},
+			});
+		}
+		return footnotes;
+	}
+
 	textParagraph(
 		text?: string,
 		link?: string,
@@ -365,7 +415,7 @@ export abstract class DocxCore {
 			: run;
 	}
 
-	async imageRun(href: string, text?: string) {
+	async imageRun(href: string, text?: string): Promise<ExternalHyperlink> {
 		let imageBuffer: Buffer = await this.getImageBuffer(href);
 
 		const dims = sizeOf(imageBuffer);
@@ -455,23 +505,13 @@ export abstract class DocxCore {
 		return children;
 	}
 
-	async run(title?: string): Promise<void> {
-		let docs: DocType[] = [];
-		const sanity = this.service.get_sanity(true);
-		if (title) {
-			logger.info(`fetching ${title} json from sanity`);
-			docs.push(await sanity.get_document(this.docType, title));
-		} else {
-			logger.info(`fetching ${this.docType} jsons from sanity`);
-			docs.push(...(await sanity.get_documents(this.docType)));
-		}
-		for (const doc of docs) {
-			await this.render(doc);
-		}
-	}
-
-	save(title: string, children: (Paragraph | Table)[]) {
+	async save(
+		title: string,
+		footnotes: FootnoteType,
+		children: (Paragraph | Table)[]
+	) {
 		const docx = new Document({
+			footnotes: footnotes,
 			sections: [{ properties: {}, children: children }],
 		});
 		const filedir = path.join(this.config.outputDir, this.docType);
@@ -481,16 +521,66 @@ export abstract class DocxCore {
 			fs.mkdirSync(filedir, { recursive: true });
 		}
 
-		Packer.toBuffer(docx).then((buffer) => {
-			fs.writeFileSync(`${filepath}.docx`, buffer);
-		});
+		const buffer = await Packer.toBuffer(docx);
+		fs.writeFileSync(`${filepath}.docx`, buffer);
+		logger.info(`${filepath}.docx is saved`);
+		// console.log(this.mtime);
+		const mtime = new Date(this.mtime);
+		logger.info(`rewrite mtime to ${mtime}`);
+		fs.utimesSync(`${filepath}.docx`, mtime, mtime);
 	}
 
 	async render(doc: DocType) {
 		logger.info(`rendering ${doc.title!}`);
 		this.imageCount = 0;
+		this.refCount = 0;
+		let footnotes = {};
+		if (this.hasFootnote) {
+			const references = inferFootnotes(doc);
+			footnotes = this.renderFootnote(references);
+		}
 		const children = await this.renderSenction(doc);
 
-		this.save(doc.title!, children);
+		await this.save(doc.title!, footnotes, children);
+	}
+
+	async run(title?: string): Promise<void> {
+		let docs: DocType[] = [];
+		if (this.config.fromLocal) {
+			if (title) {
+				const filepath = path.join(
+					this.config.outputDir,
+					this.config.docType,
+					`${title}.json`
+				);
+				logger.info(`loading ${title} from ${path.resolve(filepath)}`);
+				const doc = require(path.resolve(filepath));
+				docs.push(doc);
+			} else {
+				const filedir = path.join(
+					this.config.outputDir,
+					this.config.docType
+				);
+				fs.readdirSync(filedir).forEach((file) => {
+					if (file.endsWith(".json")) {
+						let filepath = path.join(filedir, file);
+						docs.push(require(path.resolve(filepath)));
+					}
+				});
+			}
+		} else {
+			const sanity = this.service.get_sanity(true);
+			if (title) {
+				logger.info(`fetching ${title} json from sanity`);
+				docs.push(await sanity.get_document(this.docType, title));
+			} else {
+				logger.info(`fetching ${this.docType} jsons from sanity`);
+				docs.push(...(await sanity.get_documents(this.docType)));
+			}
+		}
+
+		for (const doc of docs) {
+			await this.render(doc);
+		}
 	}
 }

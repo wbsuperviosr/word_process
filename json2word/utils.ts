@@ -1,6 +1,9 @@
 import { HeadingLevel } from "docx";
-import { Body, Child, MarkDef } from "./models/base";
+import { Body, Child, MarkDef, Reference } from "./models/base";
 import * as path from "node:path";
+import { DocType, FootnoteType } from "./render/core";
+import { Article } from "./models/article";
+import { Casefile } from "./models/casefile";
 
 export const styleMapping = new Map<number, HeadingLevel>();
 for (const [index, value] of Object.values(HeadingLevel).entries()) {
@@ -104,4 +107,17 @@ export function inferParagraphSpacing(para_style: {
 	}
 }
 
-export function inferReference(bodies: Body[]) {}
+export function inferFootnotes(doc: DocType) {
+	doc = doc as Casefile | Article;
+	const footnotes: Reference[] = [];
+	for (const paragraph of doc.body!) {
+		for (const markDef of paragraph.markDefs) {
+			if (markDef.reference && markDef.reference.length != 0) {
+				for (const ref of markDef.reference) {
+					footnotes.push(ref);
+				}
+			}
+		}
+	}
+	return footnotes;
+}

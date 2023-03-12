@@ -2,7 +2,6 @@ import { AlignmentType, HeadingLevel, LineRuleType, Table } from "docx";
 import { Service } from "../service";
 import { Timeline } from "../models/timeline";
 import { DocxCore, IDocxConfig } from "./core";
-import { sleep } from "../utils";
 
 export class TimelineEngine extends DocxCore {
 	currentDate: string = "";
@@ -41,7 +40,7 @@ export class TimelineEngine extends DocxCore {
 		const docs: Timeline[] = await sanity.get_documents("timeline");
 		docs.sort((a, b) => a.order! - b.order!);
 		let tables: Table[] = [];
-		for (const doc of docs) {
+		for (const doc of docs.slice(0, 50)) {
 			this.imageCount = 0;
 			this.imageName = `${doc.title?.slice(0, 15)}`;
 			tables.push(
@@ -50,7 +49,11 @@ export class TimelineEngine extends DocxCore {
 			);
 			// await sleep(1);
 		}
-		this.save("时间线", tables);
+		this.save("时间线", {}, tables);
+	}
+
+	get hasFootnote() {
+		return false;
 	}
 
 	get imageInFM() {

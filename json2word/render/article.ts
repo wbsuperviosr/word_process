@@ -18,6 +18,10 @@ export class ArticleEngine extends DocxCore {
 		return children;
 	}
 
+	get hasFootnote() {
+		return true;
+	}
+
 	get imageInFM() {
 		return false;
 	}

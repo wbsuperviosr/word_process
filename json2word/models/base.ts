@@ -22,7 +22,7 @@ export interface Child extends BaseElement {
 
 export interface Reference extends BaseElement {
 	title: string;
-	urlField: string;
+	urlField?: string;
 }
 
 export interface MarkDef extends BaseElement {
@@ -83,10 +83,10 @@ export const FieldStringMap = new Map([
 	["importance", "number"],
 	["rumorSpreader", "listString"],
 	["rumorVictim", "listString"],
-	["rumor", "string"],
+	["rumor", "body"],
 	["rumorArticleUrls", "listArticleUrl"],
 	["rumorImageUrls", "listImageUrl"],
-	["truth", "string"],
+	["truth", "body"],
 	["truthArticleUrls", "listArticleUrl"],
 	["truthImageUrls", "listImageUrl"],
 	["footer", "listString"],

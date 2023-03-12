@@ -6,14 +6,14 @@ export interface Rumor extends BaseDocument {
 	rumorSpreader?: string[];
 	rumorVictim?: string[];
 
-	rumor: string;
+	rumor: Body;
 	rumorArticleUrls?: ArticleUrl[];
 	rumorImageUrls?: ImageUrl[];
 
 	tags?: string[];
 	title: string;
 
-	truth: string;
+	truth: Body;
 	truthArticleUrls?: ArticleUrl[];
 	truthImageUrls?: ImageUrl[];
 }

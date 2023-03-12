@@ -19,6 +19,10 @@ export class CasefileEngine extends DocxCore {
 		return children;
 	}
 
+	get hasFootnote() {
+		return true;
+	}
+
 	get imageInFM() {
 		return false;
 	}

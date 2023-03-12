@@ -6,6 +6,10 @@ export class AboutEngine extends DocxCore {
 		super(config, service);
 	}
 
+	get hasFootnote() {
+		return false;
+	}
+
 	get imageInFM() {
 		return false;
 	}

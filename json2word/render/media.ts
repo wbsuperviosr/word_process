@@ -1,4 +1,4 @@
-import { Rumor } from "../models/rumor";
+import { Media } from "../models/media";
 import { Service } from "../service";
 import { DocxCore, IDocxConfig } from "./core";
 
@@ -7,7 +7,7 @@ export class RumorEngine extends DocxCore {
 		super(config, service);
 	}
 
-	async render(doc: Rumor): Promise<void> {
+	async render(doc: Media): Promise<void> {
 		this.imageName = doc.title;
 		super.render(doc);
 	}
