@@ -5,6 +5,7 @@ from word2json.models.article import Article
 from word2json.models.casefile import Casefile
 from word2json.models.timeline import Timeline
 from word2json.models.rumor import Rumor
+from word2json.models.media import Media
 from typing import Type
 
 

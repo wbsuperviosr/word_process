@@ -44,4 +44,6 @@ async function main() {
 		fs.writeFileSync(`test.docx`, buffer);
 	});
 }
-main();
+// main();
+
+fs.readdirSync("mswords/casefile").forEach((file) => console.log(file));

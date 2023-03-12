@@ -4,7 +4,7 @@ from word2json.utils import genKey
 from datetime import datetime
 
 if TYPE_CHECKING:
-    from word2json.engine import DocX
+    from word2json.parser.engine import DocX
 
 
 class DocTracker(object):

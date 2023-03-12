@@ -10,11 +10,14 @@
 # back to production with conssitent naaming convention.
 ############################################################
 # %%
+import hashlib
 from word2json.service import Services
 
 service = Services.parse_file("credential.json")
 sanity = service.sanity.get_client(dev=False)
 sanity_dev = service.sanity.get_client(dev=True)
+
+dataset = "develop"
 # %% 暖曦话语
 
 
@@ -46,7 +49,7 @@ for post in posts:
         private[pfield] = post[pfield]
     new_post.update(private)
     new_posts.append(new_post)
-res = sanity_dev.insert(new_posts)
+res = sanity_dev.insert(new_posts, dataset=dataset)
 print(len(res.json()["results"]), "posts uploaded")
 # %% 观者评说
 
@@ -72,7 +75,7 @@ for post in voices:
     new_post = {
         "title": post["title"],
         "slug": post["slug"],
-        "author": find_author(post["author"]["_ref"]),
+        "author": find_author(post["author"]["_ref"], authors),
         "mainImageUrl": post["mainImageUrl"],
         "featured": post.get("featured", None),
         "category": post["category"],
@@ -88,7 +91,7 @@ for post in voices:
         private[pfield] = post[pfield]
     new_post.update(private)
     new_posts.append(new_post)
-res = sanity_dev.insert(new_posts)
+res = sanity_dev.insert(new_posts, dataset=dataset)
 print(len(res.json()["results"]), "voices uploaded")
 
 # %% 部分卷宗
@@ -136,7 +139,7 @@ for post in casefiles:
         private[pfield] = post[pfield]
     new_post.update(private)
     new_posts.append(new_post)
-res = sanity_dev.insert(new_posts)
+res = sanity_dev.insert(new_posts, dataset=dataset)
 print(len(res.json()["results"]), "casefiles uploaded")
 
 # %% 时间线
@@ -174,7 +177,7 @@ for post in timelines:
         new_post["body"] = post.get("event")
 
     new_posts.append(new_post)
-res = sanity_dev.insert(new_posts)
+res = sanity_dev.insert(new_posts, dataset=dataset)
 print(len(res.json()["results"]), "timelines uploaded")
 # %% 谣言澄清
 
@@ -195,6 +198,35 @@ def process_article_fix(related):
 
 
 rumors = sanity.get("*[_type=='rumor']")
+
+
+def text2body(text):
+    paragraphs = text.split("\n")
+    payload = []
+    for p in paragraphs:
+        if p != "":
+            childkey = hashlib.sha1(p.encode()).hexdigest()[:12]
+            children = [
+                {
+                    "_key": childkey,
+                    "_type": "span",
+                    "marks": [],
+                    "text": p,
+                }
+            ]
+            payload.append(
+                {
+                    "_key": hashlib.sha1(f"{p}{childkey}".encode()).hexdigest()[:12],
+                    "_type": "block",
+                    "children": children,
+                    "markDefs": [],
+                    "style": "normal",
+                }
+            )
+
+    return payload
+
+
 new_posts = []
 for post in rumors:
     new_post = {
@@ -203,8 +235,8 @@ for post in rumors:
         "author": post.get("author", None),
         "rumorSpreader": post.get("rumor_spreader", []),
         "rumorVictim": post.get("rumor_victim", []),
-        "rumor": post.get("rumor", None),
-        "truth": post.get("truth", None),
+        "rumor": text2body(post.get("rumor", "")),
+        "truth": text2body(post.get("truth", "")),
         "tags": post.get("tags", []),
         "rumorImageUrls": process_images(post.get("rumor_images", [])),
         "truthImageUrls": process_images(post.get("truth_images", [])),
@@ -216,7 +248,8 @@ for post in rumors:
         private[pfield] = post[pfield]
     new_post.update(private)
     new_posts.append(new_post)
-res = sanity_dev.insert(new_posts)
+
+res = sanity_dev.insert(new_posts, dataset=dataset)
 print(len(res.json()["results"]), "rumors uploaded")
 
 # %% 关于我们
@@ -238,13 +271,13 @@ for post in abouts:
         private[pfield] = post[pfield]
     new_post.update(private)
     new_posts.append(new_post)
-res = sanity_dev.insert(new_posts)
+res = sanity_dev.insert(new_posts, dataset=dataset)
 print(len(res.json()["results"]), "abouts uploaded")
 
 # %% 影音资料
 
 medias = sanity.get("*[_type=='media']")
-# %%
+
 new_posts = []
 for post in medias:
     new_post = {
@@ -270,5 +303,5 @@ for post in medias:
         new_post["body"] = post.get("content")
 
     new_posts.append(new_post)
-res = sanity_dev.insert(new_posts)
+res = sanity_dev.insert(new_posts, dataset=dataset)
 print(len(res.json()["results"]), "medias uploaded")
